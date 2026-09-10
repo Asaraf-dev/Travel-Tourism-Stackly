@@ -1,0 +1,450 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="tt-dash">
+        <!--- Mobile Overlay --->
+        <div class="tt-dash-overlay" id="ttDashOverlay"></div>
+        <!--- Sidebar --->
+        <aside class="tt-dash-sidebar" id="ttDashSidebar">
+            <div class="tt-dash-sidebar-top">
+                <a href="index.html" class="tt-dash-logo">
+                    <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                </a>
+                <div class="tt-dash-sidebar-profile">
+                    <div class="tt-dash-sidebar-profile-img">
+                        <img src="assets/images/profile-1.webp" alt="Profile">
+                    </div>
+                    <div class="tt-dash-sidebar-profile-info">
+                        <strong class="tt-dash-user-name">Traveler</strong>
+                        <span class="tt-dash-user-email"></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="tt-dash-sidebar-nav">
+                <a href="admin-dashboard.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-bookings.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-airplane"></i></span>
+                    <span>Bookings</span>
+                </a>
+                <a href="admin-packages.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-map"></i></span>
+                    <span>Packages</span>
+                </a>
+                <a href="admin-profile.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-person-circle"></i></span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="tt-dash-sidebar-bottom">
+                <a href="login.html" class="tt-dash-logout" id="ttDashLogout">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="tt-dash-main">
+            <!--- Topbar --->
+            <header class="tt-dash-topbar">
+                <div class="tt-dash-topbar-left">
+                    <button type="button" class="tt-dash-menu-btn" id="ttDashMenuBtn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="tt-dash-topbar-title">
+                        <span>Travel & Tourism</span>
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                </div>
+                <div class="tt-dash-topbar-right">
+                    <div class="tt-dash-topbar-user">
+                        <span class="tt-dash-topbar-email"></span>
+                        <div class="tt-dash-topbar-profile">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Admin Bookings Content --->
+            <main class="tt-dash-content">
+                <!--- Page Header --->
+                <div class="tt-dash-page-head">
+                    <div class="tt-dash-page-heading">
+                        <span class="tt-dash-page-kicker"><i class="bi bi-airplane"></i> Booking Management</span>
+                        <h1>Travel Bookings</h1>
+                        <p>Manage traveler reservations, upcoming journeys and booking requests.</p>
+                    </div>
+                    <a href="index.html" class="tt-dash-view-site">
+                        <i class="bi bi-globe2"></i>
+                        <span>View Website</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+                <!--- Booking Summary --->
+                <div class="tt-dash-booking-stats">
+                    <div class="tt-dash-booking-stat">
+                        <div class="tt-dash-booking-stat-icon"><i class="bi bi-calendar-check"></i></div>
+                        <div>
+                            <span>Total Bookings</span>
+                            <strong>248</strong>
+                        </div>
+                        <small>+12.5%</small>
+                    </div>
+                    <div class="tt-dash-booking-stat">
+                        <div class="tt-dash-booking-stat-icon"><i class="bi bi-check2-circle"></i></div>
+                        <div>
+                            <span>Confirmed</span>
+                            <strong>186</strong>
+                        </div>
+                        <small>75%</small>
+                    </div>
+                    <div class="tt-dash-booking-stat">
+                        <div class="tt-dash-booking-stat-icon"><i class="bi bi-hourglass-split"></i></div>
+                        <div>
+                            <span>Pending</span>
+                            <strong>42</strong>
+                        </div>
+                        <small>17%</small>
+                    </div>
+                    <div class="tt-dash-booking-stat">
+                        <div class="tt-dash-booking-stat-icon"><i class="bi bi-x-circle"></i></div>
+                        <div>
+                            <span>Cancelled</span>
+                            <strong>20</strong>
+                        </div>
+                        <small>8%</small>
+                    </div>
+                </div>
+                <!--- Booking Management Panel --->
+                <section class="tt-dash-panel tt-dash-booking-panel">
+                    <!--- Panel Header --->
+                    <div class="tt-dash-panel-head">
+                        <div>
+                            <span class="tt-dash-panel-kicker">Reservations</span>
+                            <h3>All Bookings</h3>
+                        </div>
+                        <a href="404.html"><button type="button" class="tt-dash-add-btn">
+                                <i class="bi bi-plus-lg"></i>
+                                <span>New Booking</span>
+                            </button></a>
+                    </div>
+                    <!--- Booking Filters --->
+                    <div class="tt-dash-booking-filters">
+                        <div class="tt-dash-search">
+                            <i class="bi bi-search"></i>
+                            <input type="search" placeholder="Search traveler, booking ID or destination"
+                                aria-label="Search bookings">
+                        </div>
+                        <div class="tt-dash-filter">
+                            <i class="bi bi-funnel"></i>
+                            <select>
+                                <option value="">All Status</option>
+                                <option>Confirmed</option>
+                                <option>Pending</option>
+                                <option>Cancelled</option>
+                                <option>Completed</option>
+                            </select>
+                        </div>
+                        <div class="tt-dash-filter">
+                            <i class="bi bi-geo-alt"></i>
+                            <select>
+                                <option value="">All Destinations</option>
+                                <option>Bali</option>
+                                <option>Paris</option>
+                                <option>Switzerland</option>
+                                <option>Dubai</option>
+                                <option>Maldives</option>
+                            </select>
+                        </div>
+                        <div class="tt-dash-filter">
+                            <i class="bi bi-calendar3"></i>
+                            <select>
+                                <option value="">All Dates</option>
+                                <option value="this-week">This Week</option>
+                                <option value="this-month">This Month</option>
+                                <option value="next-month">Next Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--- Booking Table --->
+                    <div class="tt-dash-booking-table-wrap">
+                        <table class="tt-dash-booking-table">
+                            <thead>
+                                <tr>
+                                    <th>Booking</th>
+                                    <th>Traveler</th>
+                                    <th>Destination</th>
+                                    <th>Travel Date</th>
+                                    <th>Guests</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>#TT24801</strong>
+                                        <span>18 Sep 2026</span>
+                                    </td>
+                                    <td>
+                                        <div class="tt-dash-booking-user">
+                                            <span class="tt-dash-booking-avatar">AK</span>
+                                            <div>
+                                                <strong>Arun Kumar</strong>
+                                                <span>arun@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>Bali Escape</strong>
+                                        <span>Bali, Indonesia</span>
+                                    </td>
+                                    <td>18 Sep 2026</td>
+                                    <td>2 Adults</td>
+                                    <td><strong>₹84,500</strong></td>
+                                    <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    <td>
+                                        <div class="tt-dash-booking-actions">
+                                            <button type="button" aria-label="View booking"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button type="button" aria-label="More options"><i
+                                                    class="bi bi-three-dots"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>#TT24796</strong>
+                                        <span>16 Sep 2026</span>
+                                    </td>
+                                    <td>
+                                        <div class="tt-dash-booking-user">
+                                            <span class="tt-dash-booking-avatar">PS</span>
+                                            <div>
+                                                <strong>Priya S</strong>
+                                                <span>priya@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>Swiss Adventure</strong>
+                                        <span>Switzerland</span>
+                                    </td>
+                                    <td>24 Sep 2026</td>
+                                    <td>2 Adults</td>
+                                    <td><strong>₹1,26,000</strong></td>
+                                    <td><span class="tt-dash-status pending">Pending</span></td>
+                                    <td>
+                                        <div class="tt-dash-booking-actions">
+                                            <button type="button" aria-label="View booking"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button type="button" aria-label="More options"><i
+                                                    class="bi bi-three-dots"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>#TT24791</strong>
+                                        <span>14 Sep 2026</span>
+                                    </td>
+                                    <td>
+                                        <div class="tt-dash-booking-user">
+                                            <span class="tt-dash-booking-avatar">RM</span>
+                                            <div>
+                                                <strong>Rahul M</strong>
+                                                <span>rahul@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>Paris Romance</strong>
+                                        <span>Paris, France</span>
+                                    </td>
+                                    <td>02 Oct 2026</td>
+                                    <td>2 Adults</td>
+                                    <td><strong>₹1,18,500</strong></td>
+                                    <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    <td>
+                                        <div class="tt-dash-booking-actions">
+                                            <button type="button" aria-label="View booking"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button type="button" aria-label="More options"><i
+                                                    class="bi bi-three-dots"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>#TT24784</strong>
+                                        <span>12 Sep 2026</span>
+                                    </td>
+                                    <td>
+                                        <div class="tt-dash-booking-user">
+                                            <span class="tt-dash-booking-avatar">MR</span>
+                                            <div>
+                                                <strong>Meena R</strong>
+                                                <span>meena@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>Dubai Escape</strong>
+                                        <span>Dubai, UAE</span>
+                                    </td>
+                                    <td>11 Oct 2026</td>
+                                    <td>4 Adults</td>
+                                    <td><strong>₹96,800</strong></td>
+                                    <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    <td>
+                                        <div class="tt-dash-booking-actions">
+                                            <button type="button" aria-label="View booking"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button type="button" aria-label="More options"><i
+                                                    class="bi bi-three-dots"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>#TT24772</strong>
+                                        <span>10 Sep 2026</span>
+                                    </td>
+                                    <td>
+                                        <div class="tt-dash-booking-user">
+                                            <span class="tt-dash-booking-avatar">VA</span>
+                                            <div>
+                                                <strong>Vijay A</strong>
+                                                <span>vijay@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>Island Retreat</strong>
+                                        <span>Maldives</span>
+                                    </td>
+                                    <td>16 Oct 2026</td>
+                                    <td>2 Adults</td>
+                                    <td><strong>₹1,42,000</strong></td>
+                                    <td><span class="tt-dash-status pending">Pending</span></td>
+                                    <td>
+                                        <div class="tt-dash-booking-actions">
+                                            <button type="button" aria-label="View booking"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button type="button" aria-label="More options"><i
+                                                    class="bi bi-three-dots"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>#TT24761</strong>
+                                        <span>08 Sep 2026</span>
+                                    </td>
+                                    <td>
+                                        <div class="tt-dash-booking-user">
+                                            <span class="tt-dash-booking-avatar">SK</span>
+                                            <div>
+                                                <strong>Surya K</strong>
+                                                <span>surya@example.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>Bali Escape</strong>
+                                        <span>Bali, Indonesia</span>
+                                    </td>
+                                    <td>22 Oct 2026</td>
+                                    <td>3 Adults</td>
+                                    <td><strong>₹1,12,500</strong></td>
+                                    <td><span class="tt-dash-status cancelled">Cancelled</span></td>
+                                    <td>
+                                        <div class="tt-dash-booking-actions">
+                                            <button type="button" aria-label="View booking"><i
+                                                    class="bi bi-eye"></i></button>
+                                            <button type="button" aria-label="More options"><i
+                                                    class="bi bi-three-dots"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--- Booking Footer --->
+                    <div class="tt-dash-booking-footer">
+                        <span>Showing <strong>1–6</strong> of <strong>248</strong> bookings</span>
+                        <div class="tt-dash-pagination">
+                            <button type="button" disabled><i class="bi bi-chevron-left"></i></button>
+                            <button type="button" class="active">1</button>
+                            <button type="button" disabled>2</button>
+                            <button type="button" disabled>3</button>
+                            <span>...</span>
+                            <button type="button" disabled>42</button>
+                            <button type="button" disabled><i class="bi bi-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-booking.js"></script>
+</body>
+
+</html>

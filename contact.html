@@ -1,0 +1,547 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel & Tourism | Blog</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="tt-ldr" id="ttLdr">
+    <div class="tt-ldr-glow"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-one"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-two"></div>
+    <div class="tt-ldr-compass">
+      <div class="tt-ldr-compass-ring"></div>
+      <div class="tt-ldr-compass-inner">
+        <i class="bi bi-compass tt-ldr-compass-icon"></i>
+      </div>
+      <span class="tt-ldr-point tt-ldr-point-one"></span>
+      <span class="tt-ldr-point tt-ldr-point-two"></span>
+      <span class="tt-ldr-point tt-ldr-point-three"></span>
+      <span class="tt-ldr-point tt-ldr-point-four"></span>
+    </div>
+    <div class="tt-ldr-content">
+      <h2 class="tt-ldr-title">Travel<span>.</span></h2>
+      <p class="tt-ldr-message" id="ttLdrMessage">Preparing your journey...</p>
+    </div>
+    <div class="tt-ldr-route">
+      <span class="tt-ldr-route-line"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-one"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-two"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-three"></span>
+      <i class="fa-solid fa-plane tt-ldr-plane"></i>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+  <div data-navbar></div>
+
+  <!--- Sub Hero Section Start --->
+  <section class="tt-sub-hero">
+    <div class="tt-sub-hero-bg"></div>
+    <div class="tt-sub-hero-overlay"></div>
+    <div class="tt-sub-hero-shape tt-sub-hero-shape-one"></div>
+    <div class="tt-sub-hero-shape tt-sub-hero-shape-two"></div>
+    <div class="container">
+      <div class="tt-sub-hero-content">
+        <span class="tt-sub-hero-kicker"><i class="bi bi-compass"></i> Explore With Us</span>
+        <h1 class="tt-sub-hero-title">Let's <span>Connect</span></h1>
+        <div class="tt-sub-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span>Contact</span><span>Contact</span>
+        </div>
+      </div>
+    </div>
+    <div class="tt-sub-hero-scroll">
+      <span>Scroll To Explore</span>
+      <div class="tt-sub-hero-scroll-line"></div>
+    </div>
+  </section>
+  <!--- Sub Hero Section End --->
+
+  <!--- Contact Us / Start a Conversation Section Start --->
+  <section class="tt-con-contact" id="tt-con-contact">
+    <div class="container">
+      <div class="tt-con-contact-wrap">
+        <div class="tt-con-contact-info">
+          <span class="tt-con-contact-kicker"><i class="bi bi-send"></i> Start A Conversation</span>
+          <h2 class="tt-con-contact-title">Your Next Journey<br><span>Starts Here.</span></h2>
+          <p class="tt-con-contact-description">Tell us where you want to go, and let our travel experts turn your idea
+            into a journey worth remembering.</p>
+          <div class="tt-con-contact-highlights">
+            <div class="tt-con-contact-highlight">
+              <span class="tt-con-contact-highlight-icon"><i class="bi bi-person-heart"></i></span>
+              <div>
+                <strong>Personalized Planning</strong>
+                <p>Trips designed around you.</p>
+              </div>
+            </div>
+            <div class="tt-con-contact-highlight">
+              <span class="tt-con-contact-highlight-icon"><i class="bi bi-headset"></i></span>
+              <div>
+                <strong>Travel Expert Support</strong>
+                <p>Guidance before and during your trip.</p>
+              </div>
+            </div>
+            <div class="tt-con-contact-highlight">
+              <span class="tt-con-contact-highlight-icon"><i class="bi bi-globe2"></i></span>
+              <div>
+                <strong>Worldwide Destinations</strong>
+                <p>From hidden escapes to iconic cities.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tt-con-contact-note">
+            <span class="tt-con-contact-note-icon"><i class="bi bi-chat-quote"></i></span>
+            <div>
+              <span>Have a destination in mind?</span>
+              <strong>Let's make it happen.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="tt-con-contact-form-wrap">
+          <div class="tt-con-contact-form-head">
+            <span class="tt-con-contact-form-label">Travel Enquiry</span>
+            <span class="tt-con-contact-form-step">01 <i></i> 01</span>
+          </div>
+          <form class="tt-con-contact-form" id="ttConContactForm" novalidate>
+            <div class="tt-con-contact-row">
+              <div class="tt-con-contact-field">
+                <label for="ttConName">Full Name <span>*</span></label>
+                <div class="tt-con-contact-input-wrap">
+                  <i class="bi bi-person"></i>
+                  <input type="text" id="ttConName" name="name" placeholder="Enter your full name" required
+                    pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" title="Please enter alphabets only">
+                </div>
+              </div>
+              <div class="tt-con-contact-field">
+                <label for="ttConEmail">Email Address <span>*</span></label>
+                <div class="tt-con-contact-input-wrap">
+                  <i class="bi bi-envelope"></i>
+                  <input type="email" id="ttConEmail" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+            </div>
+            <div class="tt-con-contact-row">
+              <div class="tt-con-contact-field">
+                <label for="ttConPhone">Phone Number <span>*</span></label>
+                <div class="tt-con-contact-input-wrap">
+                  <i class="bi bi-telephone"></i>
+                  <input type="tel" id="ttConPhone" name="phone" placeholder="Enter 10 digit number" required
+                    inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10"
+                    title="Please enter exactly 10 digits">
+                </div>
+              </div>
+              <div class="tt-con-contact-field">
+                <label for="ttConDestination">Destination <span>*</span></label>
+                <div class="tt-con-contact-input-wrap">
+                  <i class="bi bi-geo-alt"></i>
+                  <select id="ttConDestination" name="destination" required>
+                    <option value="" selected disabled>Choose destination</option>
+                    <option value="Bali">Bali, Indonesia</option>
+                    <option value="Dubai">Dubai, UAE</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Paris">Paris, France</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Other">Other Destination</option>
+                  </select>
+                  <i class="bi bi-chevron-down tt-con-contact-select-icon"></i>
+                </div>
+              </div>
+            </div>
+            <div class="tt-con-contact-row">
+              <div class="tt-con-contact-field">
+                <label for="ttConTravelDate">Travel Date <span>*</span></label>
+                <div class="tt-con-contact-input-wrap">
+                  <i class="bi bi-calendar3"></i>
+                  <input type="date" id="ttConTravelDate" name="travel_date" required>
+                </div>
+              </div>
+              <div class="tt-con-contact-field">
+                <label for="ttConTravelers">Travelers <span>*</span></label>
+                <div class="tt-con-contact-input-wrap">
+                  <i class="bi bi-people"></i>
+                  <select id="ttConTravelers" name="travelers" required>
+                    <option value="" selected disabled>Select travelers</option>
+                    <option value="1">1 Traveler</option>
+                    <option value="2">2 Travelers</option>
+                    <option value="3-5">3 - 5 Travelers</option>
+                    <option value="6-10">6 - 10 Travelers</option>
+                    <option value="10+">10+ Travelers</option>
+                  </select>
+                  <i class="bi bi-chevron-down tt-con-contact-select-icon"></i>
+                </div>
+              </div>
+            </div>
+            <div class="tt-con-contact-field tt-con-contact-message-field">
+              <label for="ttConMessage">Tell Us About Your Trip <span>*</span></label>
+              <div class="tt-con-contact-input-wrap tt-con-contact-textarea-wrap">
+                <i class="bi bi-pencil"></i>
+                <textarea id="ttConMessage" name="message" rows="5"
+                  placeholder="Tell us where you want to go, your preferences or anything else we should know..."
+                  required></textarea>
+              </div>
+            </div>
+            <div class="tt-con-contact-submit-wrap">
+              <button type="submit" class="tt-con-contact-submit">
+                <span>Send Enquiry</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </button>
+              <span class="tt-con-contact-secure"><i class="bi bi-shield-check"></i> Your information is safe with
+                us</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Message Sent Popup --->
+  <div class="tt-con-success-overlay" id="ttConSuccessPopup" aria-hidden="true">
+    <div class="tt-con-success-popup" role="dialog" aria-modal="true" aria-labelledby="ttConSuccessTitle">
+      <button type="button" class="tt-con-success-close" id="ttConSuccessClose" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="tt-con-success-icon">
+        <i class="bi bi-check2"></i>
+      </div>
+      <span class="tt-con-success-kicker">Message Sent</span>
+      <h3 id="ttConSuccessTitle">You're All Set!</h3>
+      <p>Your message has been sent successfully. Our travel experts will get back to you shortly.</p>
+      <button type="button" class="tt-con-success-btn" id="ttConSuccessOk">Perfect, Thank You</button>
+    </div>
+  </div>
+  <!--- Contact Us / Start a Conversation Section End --->
+
+  <!--- Travel Assistance Section Start --->
+  <section class="tt-con-assistance">
+    <div class="container">
+      <div class="tt-con-assistance-head">
+        <div>
+          <span class="tt-con-assistance-kicker"><i class="bi bi-headset"></i> Travel Assistance</span>
+          <h2 class="tt-con-assistance-title">We're With You<br><span>Every Mile.</span></h2>
+        </div>
+        <p class="tt-con-assistance-intro">From the first idea to the final return journey, our team is here whenever
+          you need a little guidance.</p>
+      </div>
+      <div class="tt-con-assistance-grid">
+        <a href="tel:+91 98765 43210" class="tt-con-assistance-card tt-con-assistance-card-main">
+          <span class="tt-con-assistance-card-number">01</span>
+          <span class="tt-con-assistance-icon"><i class="bi bi-telephone-outbound"></i></span>
+          <div class="tt-con-assistance-card-content">
+            <span class="tt-con-assistance-label">Talk To Us</span>
+            <h3>Call Our Travel Experts</h3>
+            <p>Have a question about your destination or package? Let's talk through your plans.</p>
+            <span class="tt-con-assistance-action">Call Now <i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+        <a href="mailto:hello@stackly.com" class="tt-con-assistance-card">
+          <span class="tt-con-assistance-card-number">02</span>
+          <span class="tt-con-assistance-icon"><i class="bi bi-envelope-paper"></i></span>
+          <div class="tt-con-assistance-card-content">
+            <span class="tt-con-assistance-label">Write To Us</span>
+            <h3>Send Us An Email</h3>
+            <p>Share your travel ideas and we'll help shape them into the right journey.</p>
+            <span class="tt-con-assistance-action">Send Email <i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+        <a href="404.html" class="tt-con-assistance-card">
+          <span class="tt-con-assistance-card-number">03</span>
+          <span class="tt-con-assistance-icon"><i class="bi bi-whatsapp"></i></span>
+          <div class="tt-con-assistance-card-content">
+            <span class="tt-con-assistance-label">Quick Support</span>
+            <h3>Chat With Our Team</h3>
+            <p>Get quick answers and travel assistance through a simple conversation.</p>
+            <span class="tt-con-assistance-action">Start Chat <i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+        <div class="tt-con-assistance-card tt-con-assistance-card-hours">
+          <span class="tt-con-assistance-card-number">04</span>
+          <span class="tt-con-assistance-icon"><i class="bi bi-clock-history"></i></span>
+          <div class="tt-con-assistance-card-content">
+            <span class="tt-con-assistance-label">We're Available</span>
+            <h3>Travel Support Hours</h3>
+            <p>Monday – Saturday</p>
+            <strong>09:00 AM – 07:00 PM</strong>
+            <span class="tt-con-assistance-status"><i></i> Our experts are ready to help</span>
+          </div>
+        </div>
+      </div>
+      <div class="tt-con-assistance-bottom">
+        <div class="tt-con-assistance-bottom-line"></div>
+        <span><i class="bi bi-globe2"></i> Wherever your journey takes you</span>
+        <div class="tt-con-assistance-bottom-line"></div>
+      </div>
+    </div>
+  </section>
+  <!--- Travel Assistance Section End --->
+
+  <!--- Find Us Section Start --->
+  <section class="tt-con-location">
+    <div class="container">
+      <div class="tt-con-location-head">
+        <div>
+          <span class="tt-con-location-kicker"><i class="bi bi-geo-alt"></i> Find Us</span>
+          <h2 class="tt-con-location-title">Come Say <span>Hello.</span></h2>
+        </div>
+        <p class="tt-con-location-intro">Planning your next adventure is even better when you can meet us in person.
+          Find our travel team at our Salem office.</p>
+      </div>
+      <div class="tt-con-location-wrap">
+        <div class="tt-con-location-map">
+          <iframe
+            src="https://www.google.com/maps?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636008&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+            title="MMR Complex, Chinna Thirupathi, Salem location"></iframe>
+          <div class="tt-con-location-map-overlay"></div>
+          <div class="tt-con-location-marker">
+            <span class="tt-con-location-marker-ring"></span>
+            <span class="tt-con-location-marker-pin"><i class="bi bi-geo-alt-fill"></i></span>
+          </div>
+          <div class="tt-con-location-map-label">
+            <span><i class="bi bi-pin-map-fill"></i> Our Location</span>
+            <strong>MMR Complex</strong>
+          </div>
+        </div>
+        <div class="tt-con-location-card">
+          <span class="tt-con-location-card-top">Travel & Tourism</span>
+          <div class="tt-con-location-card-icon"><i class="bi bi-buildings"></i></div>
+          <span class="tt-con-location-card-label">Visit Our Office</span>
+          <h3>MMR Complex</h3>
+          <p class="tt-con-location-address">Chinna Thirupathi,<br>Salem, Tamil Nadu 636008</p>
+          <div class="tt-con-location-details">
+            <div class="tt-con-location-detail">
+              <span class="tt-con-location-detail-icon"><i class="bi bi-clock"></i></span>
+              <div>
+                <span>Office Hours</span>
+                <strong>Mon – Sat, 09 AM – 07 PM</strong>
+              </div>
+            </div>
+            <div class="tt-con-location-detail">
+              <span class="tt-con-location-detail-icon"><i class="bi bi-headset"></i></span>
+              <div>
+                <span>Travel Support</span>
+                <strong>Available During Office Hours</strong>
+              </div>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636008"
+            target="_blank" rel="noopener noreferrer" class="tt-con-location-direction">
+            <span>Get Directions</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <div class="tt-con-location-card-footer">
+            <span><i class="bi bi-globe2"></i> Let's meet & plan your journey</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Find Us Section End --->
+
+  <!--- Why Talk To Us? Section Start --->
+  <section class="tt-con-why">
+    <div class="container">
+      <div class="tt-con-why-head">
+        <span class="tt-con-why-kicker"><i class="bi bi-stars"></i> Why Talk To Us?</span>
+        <h2 class="tt-con-why-title">Good Trips Start With<br><span>Good Conversations.</span></h2>
+        <p class="tt-con-why-intro">You bring the dream. We bring the experience, knowledge and attention to detail to
+          turn it into a journey that feels made just for you.</p>
+      </div>
+      <div class="tt-con-why-list">
+        <div class="tt-con-why-item">
+          <div class="tt-con-why-number">01</div>
+          <div class="tt-con-why-icon"><i class="bi bi-compass"></i></div>
+          <div class="tt-con-why-content">
+            <h3>We Listen Before We Plan</h3>
+            <p>Your travel style matters. We understand what you enjoy, what you need and what you want from your
+              journey before suggesting a plan.</p>
+          </div>
+
+        </div>
+        <div class="tt-con-why-item">
+          <div class="tt-con-why-number">02</div>
+          <div class="tt-con-why-icon"><i class="bi bi-map"></i></div>
+          <div class="tt-con-why-content">
+            <h3>We Know The Journey</h3>
+            <p>From iconic highlights to hidden experiences, our travel knowledge helps you spend less time searching
+              and more time enjoying.</p>
+          </div>
+
+        </div>
+        <div class="tt-con-why-item">
+          <div class="tt-con-why-number">03</div>
+          <div class="tt-con-why-icon"><i class="bi bi-sliders2"></i></div>
+          <div class="tt-con-why-content">
+            <h3>We Make It Personal</h3>
+            <p>Every itinerary can be shaped around your pace, preferences, budget and travel goals instead of forcing
+              you into a fixed experience.</p>
+          </div>
+
+        </div>
+        <div class="tt-con-why-item">
+          <div class="tt-con-why-number">04</div>
+          <div class="tt-con-why-icon"><i class="bi bi-shield-check"></i></div>
+          <div class="tt-con-why-content">
+            <h3>We Stay With You</h3>
+            <p>Travel planning does not end when you book. Our team remains available to make your experience smoother
+              from start to finish.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="tt-con-why-bottom">
+        <div class="tt-con-why-bottom-mark"><i class="bi bi-chat-heart"></i></div>
+        <div>
+          <span>Not sure where to begin?</span>
+          <strong>Just tell us what kind of trip you're dreaming about.</strong>
+        </div>
+        <a href="#tt-con-contact" class="tt-con-why-bottom-btn">Start A Conversation <i
+            class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Why Talk To Us? Section End --->
+
+  <!--- FAQ / Quick Answers Section Start --->
+  <section class="tt-con-faq">
+    <div class="container">
+      <div class="tt-con-faq-head">
+        <div class="tt-con-faq-heading">
+          <span class="tt-con-faq-kicker"><i class="bi bi-question-circle"></i> FAQ / Quick Answers</span>
+          <h2 class="tt-con-faq-title">Questions?<br><span>We've Got Answers.</span></h2>
+        </div>
+        <div class="tt-con-faq-head-right">
+          <p>Find quick answers to the things travelers ask us most. Still curious? We're always happy to help.</p>
+          <a href="#tt-con-contact" class="tt-con-faq-link">Ask Us Something <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="tt-con-faq-layout">
+        <div class="tt-con-faq-feature">
+          <div class="tt-con-faq-feature-icon"><i class="bi bi-chat-square-heart"></i></div>
+          <span class="tt-con-faq-feature-label">Need More Help?</span>
+          <h3>Can't find what<br>you're looking for?</h3>
+          <p>Every journey is different. Tell us what you have in mind and our travel experts will help you find the
+            right answer.</p>
+          <span class="tt-con-faq-feature-decoration">TRAVEL • EXPLORE • DISCOVER</span>
+        </div>
+        <div class="tt-con-faq-list">
+          <div class="tt-con-faq-item active">
+            <button type="button" class="tt-con-faq-question">
+              <span class="tt-con-faq-number">01</span>
+              <span class="tt-con-faq-question-text">How do I choose the right travel package?</span>
+              <span class="tt-con-faq-icon"><i class="bi bi-plus"></i></span>
+            </button>
+            <div class="tt-con-faq-answer">
+              <p>Tell us your preferred destination, travel dates, budget and the kind of experience you want. Our team
+                can then help you choose or customize a package that fits your plans.</p>
+            </div>
+          </div>
+          <div class="tt-con-faq-item">
+            <button type="button" class="tt-con-faq-question">
+              <span class="tt-con-faq-number">02</span>
+              <span class="tt-con-faq-question-text">Can I customize a travel package?</span>
+              <span class="tt-con-faq-icon"><i class="bi bi-plus"></i></span>
+            </button>
+            <div class="tt-con-faq-answer">
+              <p>Yes. You can discuss your preferred destinations, activities, accommodation style and travel pace with
+                our team so we can shape the experience around you.</p>
+            </div>
+          </div>
+          <div class="tt-con-faq-item">
+            <button type="button" class="tt-con-faq-question">
+              <span class="tt-con-faq-number">03</span>
+              <span class="tt-con-faq-question-text">How far in advance should I plan my trip?</span>
+              <span class="tt-con-faq-icon"><i class="bi bi-plus"></i></span>
+            </button>
+            <div class="tt-con-faq-answer">
+              <p>Planning early usually gives you more flexibility with flights, stays and experiences. However, our
+                team can also help with shorter-notice travel depending on availability.</p>
+            </div>
+          </div>
+          <div class="tt-con-faq-item">
+            <button type="button" class="tt-con-faq-question">
+              <span class="tt-con-faq-number">04</span>
+              <span class="tt-con-faq-question-text">Do you help with flights and accommodation?</span>
+              <span class="tt-con-faq-icon"><i class="bi bi-plus"></i></span>
+            </button>
+            <div class="tt-con-faq-answer">
+              <p>We can guide you through the key parts of your trip, including suitable accommodation and travel
+                arrangements based on your selected package and requirements.</p>
+            </div>
+          </div>
+          <div class="tt-con-faq-item">
+            <button type="button" class="tt-con-faq-question">
+              <span class="tt-con-faq-number">05</span>
+              <span class="tt-con-faq-question-text">What if I need help during my journey?</span>
+              <span class="tt-con-faq-icon"><i class="bi bi-plus"></i></span>
+            </button>
+            <div class="tt-con-faq-answer">
+              <p>Our travel assistance team is available to help with travel-related questions and support according to
+                the services included with your booking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- FAQ / Quick Answers Section End --->
+
+  <div data-footer></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

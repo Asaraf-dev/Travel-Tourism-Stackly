@@ -1,0 +1,155 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+
+<body>
+
+    <!--- Login Page --->
+    <main class="tt-auth-page">
+        <div class="tt-auth-decoration tt-auth-decoration-one"></div>
+        <div class="tt-auth-decoration tt-auth-decoration-two"></div>
+        <div class="container">
+            <div class="tt-auth-wrap">
+                <div class="tt-auth-brand">
+                    <a href="index.html" class="tt-auth-logo">
+                        <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                    </a>
+                    <span class="tt-auth-brand-line"></span>
+                    <span>Travel beyond ordinary.</span>
+                </div>
+                <div class="tt-auth-content">
+                    <div class="tt-auth-intro">
+                        <span class="tt-auth-kicker"><i class="bi bi-compass"></i> Welcome Back</span>
+                        <h1>Ready for your<br><span>next journey?</span></h1>
+                        <p>Sign in to continue planning, exploring and managing your travel experiences.</p>
+                    </div>
+                    <div class="tt-auth-card">
+                        <div class="tt-auth-card-head">
+                            <span>Sign In</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                        <form id="ttLoginForm" class="tt-auth-form" novalidate>
+                            <div class="tt-auth-role">
+                                <label class="tt-auth-field-label">Continue As <span>*</span></label>
+                                <div class="tt-auth-role-options">
+                                    <label class="tt-auth-role-option">
+                                        <input type="radio" name="ttLoginRole" value="admin" required>
+                                        <span class="tt-auth-role-box">
+                                            <span class="tt-auth-role-icon"><i class="bi bi-shield-lock"></i></span>
+                                            <span class="tt-auth-role-content">
+                                                <strong>Admin</strong>
+                                                <small>Manage & oversee</small>
+                                            </span>
+                                            <span class="tt-auth-role-check"><i class="bi bi-check"></i></span>
+                                        </span>
+                                    </label>
+                                    <label class="tt-auth-role-option">
+                                        <input type="radio" name="ttLoginRole" value="client" required>
+                                        <span class="tt-auth-role-box">
+                                            <span class="tt-auth-role-icon"><i class="bi bi-person"></i></span>
+                                            <span class="tt-auth-role-content">
+                                                <strong>Client</strong>
+                                                <small>Plan & explore</small>
+                                            </span>
+                                            <span class="tt-auth-role-check"><i class="bi bi-check"></i></span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttLoginEmail" class="tt-auth-field-label">Email Address
+                                    <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-envelope tt-auth-input-icon"></i>
+                                    <input type="email" id="ttLoginEmail" name="email" class="tt-auth-input"
+                                        placeholder="Enter your email address" autocomplete="email" required>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttLoginPassword" class="tt-auth-field-label">Password <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-lock tt-auth-input-icon"></i>
+                                    <input type="password" id="ttLoginPassword" name="password" class="tt-auth-input"
+                                        placeholder="Enter your password" autocomplete="current-password" required>
+                                    <button type="button" class="tt-auth-password-toggle" id="ttLoginPasswordToggle"
+                                        aria-label="Show password">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tt-auth-options">
+                                <label class="tt-auth-remember">
+                                    <input type="checkbox" id="ttLoginRemember" name="remember">
+                                    <span class="tt-auth-custom-check"><i class="bi bi-check"></i></span>
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="404.html" class="tt-auth-forgot">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="tt-auth-submit">
+                                <span>Login To Continue</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+                            <div class="tt-auth-signup">
+                                <span>Don't have an account?</span>
+                                <a href="register.html">Sign Up <i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tt-auth-brand">
+                    <a href="index.html" class="tt-auth-home">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Back To Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

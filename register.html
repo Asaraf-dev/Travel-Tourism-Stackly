@@ -1,0 +1,199 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Register</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+
+<body>
+
+    <!--- Register Page --->
+    <main class="tt-auth-page">
+        <div class="tt-auth-decoration tt-auth-decoration-one"></div>
+        <div class="tt-auth-decoration tt-auth-decoration-two"></div>
+        <div class="container">
+            <div class="tt-auth-wrap">
+                <div class="tt-auth-brand">
+                    <a href="index.html" class="tt-auth-logo">
+                        <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                    </a>
+                    <span class="tt-auth-brand-line"></span>
+                    <span>Travel beyond ordinary.</span>
+                </div>
+                <div class="tt-auth-content">
+                    <div class="tt-auth-intro">
+                        <span class="tt-auth-kicker"><i class="bi bi-person-plus"></i> Create Your Account</span>
+                        <h1>Your journey<br><span>starts here.</span></h1>
+                        <p>Create your account and unlock a simpler way to discover destinations, explore experiences
+                            and plan unforgettable journeys.</p>
+                        <div class="tt-reg-intro-points">
+                            <div class="tt-reg-intro-point">
+                                <i class="bi bi-compass"></i>
+                                <span>Discover new destinations</span>
+                            </div>
+                            <div class="tt-reg-intro-point">
+                                <i class="bi bi-map"></i>
+                                <span>Plan your perfect journey</span>
+                            </div>
+                            <div class="tt-reg-intro-point">
+                                <i class="bi bi-heart"></i>
+                                <span>Save your travel experiences</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tt-auth-card">
+                        <div class="tt-auth-card-head">
+                            <span>Create Account</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                        <form id="ttRegisterForm" class="tt-auth-form">
+                            <div class="tt-auth-role">
+                                <label class="tt-auth-field-label">Create Account As <span>*</span></label>
+                                <div class="tt-auth-role-options">
+                                    <label class="tt-auth-role-option">
+                                        <input type="radio" name="ttRegisterRole" value="admin" required>
+                                        <span class="tt-auth-role-box">
+                                            <span class="tt-auth-role-icon"><i class="bi bi-shield-lock"></i></span>
+                                            <span class="tt-auth-role-content">
+                                                <strong>Admin</strong>
+                                                <small>Manage & oversee</small>
+                                            </span>
+                                            <span class="tt-auth-role-check"><i class="bi bi-check"></i></span>
+                                        </span>
+                                    </label>
+                                    <label class="tt-auth-role-option">
+                                        <input type="radio" name="ttRegisterRole" value="client" required>
+                                        <span class="tt-auth-role-box">
+                                            <span class="tt-auth-role-icon"><i class="bi bi-person"></i></span>
+                                            <span class="tt-auth-role-content">
+                                                <strong>Client</strong>
+                                                <small>Plan & explore</small>
+                                            </span>
+                                            <span class="tt-auth-role-check"><i class="bi bi-check"></i></span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttRegisterName" class="tt-auth-field-label">Full Name <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-person tt-auth-input-icon"></i>
+                                    <input type="text" id="ttRegisterName" name="name" class="tt-auth-input"
+                                        placeholder="Enter your full name" autocomplete="name" pattern="[A-Za-z ]+"
+                                        title="Please enter alphabetic characters only" required>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttRegisterPhone" class="tt-auth-field-label">Phone Number
+                                    <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-telephone tt-auth-input-icon"></i>
+                                    <input type="tel" id="ttRegisterPhone" name="phone" class="tt-auth-input"
+                                        placeholder="Enter your 10 digit phone number" autocomplete="tel"
+                                        inputmode="numeric" maxlength="10" minlength="10" pattern="[0-9]{10}"
+                                        title="Phone number must contain exactly 10 digits" required>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttRegisterEmail" class="tt-auth-field-label">Email Address
+                                    <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-envelope tt-auth-input-icon"></i>
+                                    <input type="email" id="ttRegisterEmail" name="email" class="tt-auth-input"
+                                        placeholder="Enter your email address" autocomplete="email" required>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttRegisterPassword" class="tt-auth-field-label">Password
+                                    <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-lock tt-auth-input-icon"></i>
+                                    <input type="password" id="ttRegisterPassword" name="password" class="tt-auth-input"
+                                        placeholder="Create a strong password" autocomplete="new-password" minlength="8"
+                                        pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).{8,}"
+                                        title="Password must contain at least one number, one uppercase letter, one lowercase letter, one special character and be at least 8 characters long"
+                                        required>
+                                    <button type="button" class="tt-auth-password-toggle" id="ttRegisterPasswordToggle"
+                                        aria-label="Show password">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tt-auth-field">
+                                <label for="ttRegisterConfirmPassword" class="tt-auth-field-label">Confirm Password
+                                    <span>*</span></label>
+                                <div class="tt-auth-input-wrap">
+                                    <i class="bi bi-shield-check tt-auth-input-icon"></i>
+                                    <input type="password" id="ttRegisterConfirmPassword" name="confirmPassword"
+                                        class="tt-auth-input" placeholder="Confirm your password"
+                                        autocomplete="new-password" required>
+                                    <button type="button" class="tt-auth-password-toggle"
+                                        id="ttRegisterConfirmPasswordToggle" aria-label="Show password">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="tt-auth-submit">
+                                <span>Create Account</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+                            <div class="tt-auth-signup">
+                                <span>Already have an account?</span>
+                                <a href="login.html">Sign In <i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tt-auth-brand">
+                    <a href="index.html" class="tt-auth-home">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Back To Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

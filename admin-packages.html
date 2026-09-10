@@ -1,0 +1,428 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="tt-dash">
+        <!--- Mobile Overlay --->
+        <div class="tt-dash-overlay" id="ttDashOverlay"></div>
+        <!--- Sidebar --->
+        <aside class="tt-dash-sidebar" id="ttDashSidebar">
+            <div class="tt-dash-sidebar-top">
+                <a href="index.html" class="tt-dash-logo">
+                    <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                </a>
+                <div class="tt-dash-sidebar-profile">
+                    <div class="tt-dash-sidebar-profile-img">
+                        <img src="assets/images/profile-1.webp" alt="Profile">
+                    </div>
+                    <div class="tt-dash-sidebar-profile-info">
+                        <strong class="tt-dash-user-name">Traveler</strong>
+                        <span class="tt-dash-user-email"></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="tt-dash-sidebar-nav">
+                <a href="admin-dashboard.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-bookings.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-airplane"></i></span>
+                    <span>Bookings</span>
+                </a>
+                <a href="admin-packages.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-map"></i></span>
+                    <span>Packages</span>
+                </a>
+                <a href="admin-profile.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-person-circle"></i></span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="tt-dash-sidebar-bottom">
+                <a href="login.html" class="tt-dash-logout" id="ttDashLogout">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="tt-dash-main">
+            <!--- Topbar --->
+            <header class="tt-dash-topbar">
+                <div class="tt-dash-topbar-left">
+                    <button type="button" class="tt-dash-menu-btn" id="ttDashMenuBtn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="tt-dash-topbar-title">
+                        <span>Travel & Tourism</span>
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                </div>
+                <div class="tt-dash-topbar-right">
+                    <div class="tt-dash-topbar-user">
+                        <span class="tt-dash-topbar-email"></span>
+                        <div class="tt-dash-topbar-profile">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Admin Packages Content --->
+            <main class="tt-dash-content">
+                <div class="tt-dash-page-head">
+                    <div class="tt-dash-page-title">
+                        <span class="tt-dash-page-kicker"><i class="bi bi-map"></i> Package Management</span>
+                        <h2>Travel Packages</h2>
+                        <p>Create, manage and organize your travel experiences.</p>
+                    </div>
+                    <button type="button" class="tt-dash-add-btn" id="ttDashAddPackageBtn">
+                        <i class="bi bi-plus-lg"></i>
+                        <span>Add Package</span>
+                    </button>
+                </div>
+                <div class="tt-dash-package-toolbar">
+                    <div class="tt-dash-package-search">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="ttDashPackageSearch"
+                            placeholder="Search packages, destinations or categories..." aria-label="Search packages">
+                    </div>
+                    <div class="tt-dash-package-filter">
+                        <select id="ttDashPackageCategory" aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                            <option value="beach">Beach Escapes</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="romantic">Romantic</option>
+                            <option value="culture">Culture</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <div class="tt-dash-package-filter">
+                        <select id="ttDashPackageStatus" aria-label="Filter by status">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="draft">Draft</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="tt-dash-package-filter">
+                        <select id="ttDashPackageSort" aria-label="Sort packages">
+                            <option value="featured">Featured First</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tt-dash-package-summary">
+                    <div class="tt-dash-package-summary-left">
+                        <span class="tt-dash-package-count">36 Packages</span>
+                        <span class="tt-dash-package-divider"></span>
+                        <span>Manage your published travel experiences</span>
+                    </div>
+                    <div class="tt-dash-package-summary-right">
+                        <span><i class="bi bi-circle-fill"></i> 28 Active</span>
+                        <span><i class="bi bi-circle-fill"></i> 5 Draft</span>
+                        <span><i class="bi bi-circle-fill"></i> 3 Inactive</span>
+                    </div>
+                </div>
+                <div class="tt-dash-packages-grid" id="ttDashPackagesGrid">
+                    <article class="tt-dash-package-card" data-category="beach" data-status="active" data-price="84500"
+                        data-rating="4.9">
+                        <div class="tt-dash-package-image">
+                            <img src="assets/images/package-bali.webp" alt="Bali Escape">
+                            <span class="tt-dash-package-badge active">Active</span>
+                            <span class="tt-dash-package-number">01</span>
+                            <div class="tt-dash-package-overlay">
+                                <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                <span><i class="bi bi-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="tt-dash-package-body">
+                            <div class="tt-dash-package-location">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Bali, Indonesia</span>
+                            </div>
+                            <h3>Bali Escape</h3>
+                            <p>Private villas, hidden beaches and unforgettable island experiences.</p>
+                            <div class="tt-dash-package-meta">
+                                <span><i class="bi bi-calendar3"></i> 6 Days / 5 Nights</span>
+                                <span><i class="bi bi-people"></i> 2–4 Guests</span>
+                            </div>
+                            <div class="tt-dash-package-bottom">
+                                <div class="tt-dash-package-price">
+                                    <small>Starting from</small>
+                                    <strong>₹84,500</strong>
+                                </div>
+                                <div class="tt-dash-package-actions">
+                                    <button type="button" aria-label="View package"><i class="bi bi-eye"></i></button>
+                                    <button type="button" aria-label="Edit package"><i
+                                            class="bi bi-pencil"></i></button>
+                                    <button type="button" aria-label="Delete package"><i
+                                            class="bi bi-trash3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tt-dash-package-card" data-category="adventure" data-status="active"
+                        data-price="126000" data-rating="4.8">
+                        <div class="tt-dash-package-image">
+                            <img src="assets/images/switzerland-adventure.webp" alt="Swiss Adventure">
+                            <span class="tt-dash-package-badge active">Active</span>
+                            <span class="tt-dash-package-number">02</span>
+                            <div class="tt-dash-package-overlay">
+                                <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                <span><i class="bi bi-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="tt-dash-package-body">
+                            <div class="tt-dash-package-location">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Switzerland</span>
+                            </div>
+                            <h3>Swiss Adventure</h3>
+                            <p>Scenic train journeys, alpine villages and breathtaking mountain views.</p>
+                            <div class="tt-dash-package-meta">
+                                <span><i class="bi bi-calendar3"></i> 8 Days / 7 Nights</span>
+                                <span><i class="bi bi-people"></i> 2–6 Guests</span>
+                            </div>
+                            <div class="tt-dash-package-bottom">
+                                <div class="tt-dash-package-price">
+                                    <small>Starting from</small>
+                                    <strong>₹1,26,000</strong>
+                                </div>
+                                <div class="tt-dash-package-actions">
+                                    <button type="button" aria-label="View package"><i class="bi bi-eye"></i></button>
+                                    <button type="button" aria-label="Edit package"><i
+                                            class="bi bi-pencil"></i></button>
+                                    <button type="button" aria-label="Delete package"><i
+                                            class="bi bi-trash3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tt-dash-package-card" data-category="romantic" data-status="active"
+                        data-price="118500" data-rating="4.9">
+                        <div class="tt-dash-package-image">
+                            <img src="assets/images/destination-paris.webp" alt="Paris Romance">
+                            <span class="tt-dash-package-badge active">Active</span>
+                            <span class="tt-dash-package-number">03</span>
+                            <div class="tt-dash-package-overlay">
+                                <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                <span><i class="bi bi-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="tt-dash-package-body">
+                            <div class="tt-dash-package-location">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Paris, France</span>
+                            </div>
+                            <h3>Paris Romance</h3>
+                            <p>A romantic European escape filled with charming streets and timeless moments.</p>
+                            <div class="tt-dash-package-meta">
+                                <span><i class="bi bi-calendar3"></i> 6 Days / 5 Nights</span>
+                                <span><i class="bi bi-people"></i> 2–4 Guests</span>
+                            </div>
+                            <div class="tt-dash-package-bottom">
+                                <div class="tt-dash-package-price">
+                                    <small>Starting from</small>
+                                    <strong>₹1,18,500</strong>
+                                </div>
+                                <div class="tt-dash-package-actions">
+                                    <button type="button" aria-label="View package"><i class="bi bi-eye"></i></button>
+                                    <button type="button" aria-label="Edit package"><i
+                                            class="bi bi-pencil"></i></button>
+                                    <button type="button" aria-label="Delete package"><i
+                                            class="bi bi-trash3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tt-dash-package-card" data-category="luxury" data-status="active" data-price="96500"
+                        data-rating="4.7">
+                        <div class="tt-dash-package-image">
+                            <img src="assets/images/destination-dubai.webp" alt="Dubai Escape">
+                            <span class="tt-dash-package-badge active">Active</span>
+                            <span class="tt-dash-package-number">04</span>
+                            <div class="tt-dash-package-overlay">
+                                <span><i class="bi bi-star-fill"></i> 4.7</span>
+                                <span><i class="bi bi-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="tt-dash-package-body">
+                            <div class="tt-dash-package-location">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Dubai, UAE</span>
+                            </div>
+                            <h3>Dubai Escape</h3>
+                            <p>Luxury stays, desert adventures and spectacular city experiences.</p>
+                            <div class="tt-dash-package-meta">
+                                <span><i class="bi bi-calendar3"></i> 5 Days / 4 Nights</span>
+                                <span><i class="bi bi-people"></i> 2–5 Guests</span>
+                            </div>
+                            <div class="tt-dash-package-bottom">
+                                <div class="tt-dash-package-price">
+                                    <small>Starting from</small>
+                                    <strong>₹96,500</strong>
+                                </div>
+                                <div class="tt-dash-package-actions">
+                                    <button type="button" aria-label="View package"><i class="bi bi-eye"></i></button>
+                                    <button type="button" aria-label="Edit package"><i
+                                            class="bi bi-pencil"></i></button>
+                                    <button type="button" aria-label="Delete package"><i
+                                            class="bi bi-trash3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tt-dash-package-card" data-category="beach" data-status="draft" data-price="142000"
+                        data-rating="4.8">
+                        <div class="tt-dash-package-image">
+                            <img src="assets/images/experience-beach.webp" alt="Island Retreat">
+                            <span class="tt-dash-package-badge draft">Draft</span>
+                            <span class="tt-dash-package-number">05</span>
+                            <div class="tt-dash-package-overlay">
+                                <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                <span><i class="bi bi-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="tt-dash-package-body">
+                            <div class="tt-dash-package-location">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Maldives</span>
+                            </div>
+                            <h3>Island Retreat</h3>
+                            <p>Turquoise waters, private villas and peaceful tropical island days.</p>
+                            <div class="tt-dash-package-meta">
+                                <span><i class="bi bi-calendar3"></i> 5 Days / 4 Nights</span>
+                                <span><i class="bi bi-people"></i> 2–4 Guests</span>
+                            </div>
+                            <div class="tt-dash-package-bottom">
+                                <div class="tt-dash-package-price">
+                                    <small>Starting from</small>
+                                    <strong>₹1,42,000</strong>
+                                </div>
+                                <div class="tt-dash-package-actions">
+                                    <button type="button" aria-label="View package"><i class="bi bi-eye"></i></button>
+                                    <button type="button" aria-label="Edit package"><i
+                                            class="bi bi-pencil"></i></button>
+                                    <button type="button" aria-label="Delete package"><i
+                                            class="bi bi-trash3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tt-dash-package-card" data-category="culture" data-status="inactive"
+                        data-price="74500" data-rating="4.6">
+                        <div class="tt-dash-package-image">
+                            <img src="assets/images/experience-luxury.webp" alt="Singapore Discovery">
+                            <span class="tt-dash-package-badge inactive">Inactive</span>
+                            <span class="tt-dash-package-number">06</span>
+                            <div class="tt-dash-package-overlay">
+                                <span><i class="bi bi-star-fill"></i> 4.6</span>
+                                <span><i class="bi bi-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="tt-dash-package-body">
+                            <div class="tt-dash-package-location">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Singapore</span>
+                            </div>
+                            <h3>Singapore Discovery</h3>
+                            <p>Modern city energy, cultural neighbourhoods and unforgettable food trails.</p>
+                            <div class="tt-dash-package-meta">
+                                <span><i class="bi bi-calendar3"></i> 4 Days / 3 Nights</span>
+                                <span><i class="bi bi-people"></i> 2–5 Guests</span>
+                            </div>
+                            <div class="tt-dash-package-bottom">
+                                <div class="tt-dash-package-price">
+                                    <small>Starting from</small>
+                                    <strong>₹74,500</strong>
+                                </div>
+                                <div class="tt-dash-package-actions">
+                                    <button type="button" aria-label="View package"><i class="bi bi-eye"></i></button>
+                                    <button type="button" aria-label="Edit package"><i
+                                            class="bi bi-pencil"></i></button>
+                                    <button type="button" aria-label="Delete package"><i
+                                            class="bi bi-trash3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="tt-dash-package-empty" id="ttDashPackageEmpty">
+                    <span><i class="bi bi-map"></i></span>
+                    <h3>No Packages Found</h3>
+                    <p>Try changing your search or filter options.</p>
+                </div>
+                <div class="tt-dash-package-footer">
+                    <span>Showing <strong>1–6</strong> of <strong>36</strong> packages</span>
+                    <div class="tt-dash-pagination">
+                        <button type="button" disabled><i class="bi bi-chevron-left"></i></button>
+                        <button type="button" class="active">1</button>
+                        <button type="button" disabled>2</button>
+                        <button type="button" disabled>3</button>
+                        <span>...</span>
+                        <button type="button" disabled>6</button>
+                        <button type="button" disabled><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </main>
+
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-packages.js"></script>
+</body>
+
+</html>

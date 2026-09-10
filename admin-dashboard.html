@@ -1,0 +1,462 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="tt-dash">
+        <!--- Mobile Overlay --->
+        <div class="tt-dash-overlay" id="ttDashOverlay"></div>
+        <!--- Sidebar --->
+        <aside class="tt-dash-sidebar" id="ttDashSidebar">
+            <div class="tt-dash-sidebar-top">
+                <a href="index.html" class="tt-dash-logo">
+                    <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                </a>
+                <div class="tt-dash-sidebar-profile">
+                    <div class="tt-dash-sidebar-profile-img">
+                        <img src="assets/images/profile-1.webp" alt="Profile">
+                    </div>
+                    <div class="tt-dash-sidebar-profile-info">
+                        <strong class="tt-dash-user-name">Traveler</strong>
+                        <span class="tt-dash-user-email"></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="tt-dash-sidebar-nav">
+                <a href="admin-dashboard.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-bookings.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-airplane"></i></span>
+                    <span>Bookings</span>
+                </a>
+                <a href="admin-packages.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-map"></i></span>
+                    <span>Packages</span>
+                </a>
+                <a href="admin-profile.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-person-circle"></i></span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="tt-dash-sidebar-bottom">
+                <a href="login.html" class="tt-dash-logout" id="ttDashLogout">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="tt-dash-main">
+            <!--- Topbar --->
+            <header class="tt-dash-topbar">
+                <div class="tt-dash-topbar-left">
+                    <button type="button" class="tt-dash-menu-btn" id="ttDashMenuBtn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="tt-dash-topbar-title">
+                        <span>Travel & Tourism</span>
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                </div>
+                <div class="tt-dash-topbar-right">
+                    <div class="tt-dash-topbar-user">
+                        <span class="tt-dash-topbar-email"></span>
+                        <div class="tt-dash-topbar-profile">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Dashboard Content --->
+            <main class="tt-dash-content">
+                <!--- Welcome --->
+                <div class="tt-dash-welcome">
+                    <div class="tt-dash-welcome-text">
+                        <span class="tt-dash-welcome-kicker"><i class="bi bi-sunrise"></i> Welcome Back</span>
+                        <h2>Hello, <span class="tt-dash-welcome-name">Traveler</span></h2>
+                        <p>Here's your travel platform overview for today.</p>
+                    </div>
+                    <a href="index.html" class="tt-dash-view-site">
+                        <i class="bi bi-globe2"></i>
+                        <span>View Website</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+                <!--- Dashboard Stats --->
+                <div class="tt-dash-stats">
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Total Bookings</span>
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                        <strong>248</strong>
+                        <small><b>+12.5%</b> from last month</small>
+                        <div class="tt-dash-stat-progress"><span style="width:82%;"></span></div>
+                    </div>
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Active Travelers</span>
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <strong>1,842</strong>
+                        <small><b>+8.2%</b> from last month</small>
+                        <div class="tt-dash-stat-progress"><span style="width:74%;"></span></div>
+                    </div>
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Travel Packages</span>
+                            <i class="bi bi-map"></i>
+                        </div>
+                        <strong>36</strong>
+                        <small><b>+4 new</b> this month</small>
+                        <div class="tt-dash-stat-progress"><span style="width:61%;"></span></div>
+                    </div>
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Total Revenue</span>
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <strong>₹8.4L</strong>
+                        <small><b>+15.8%</b> from last month</small>
+                        <div class="tt-dash-stat-progress"><span style="width:88%;"></span></div>
+                    </div>
+                </div>
+                <!--- Overview Row --->
+                <div class="tt-dash-overview-grid">
+                    <section class="tt-dash-panel tt-dash-revenue">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Performance</span>
+                                <h3>Booking Overview</h3>
+                            </div>
+
+                        </div>
+                        <div class="tt-dash-chart">
+                            <div class="tt-dash-chart-y">
+                                <span>80</span>
+                                <span>60</span>
+                                <span>40</span>
+                                <span>20</span>
+                                <span>0</span>
+                            </div>
+                            <div class="tt-dash-chart-area">
+                                <div class="tt-dash-chart-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="tt-dash-chart-bars">
+                                    <div class="tt-dash-chart-bar"><span style="height:42%;"></span></div>
+                                    <div class="tt-dash-chart-bar"><span style="height:58%;"></span></div>
+                                    <div class="tt-dash-chart-bar"><span style="height:48%;"></span></div>
+                                    <div class="tt-dash-chart-bar"><span style="height:72%;"></span></div>
+                                    <div class="tt-dash-chart-bar"><span style="height:61%;"></span></div>
+                                    <div class="tt-dash-chart-bar"><span style="height:84%;"></span></div>
+                                    <div class="tt-dash-chart-bar active"><span style="height:93%;"></span></div>
+                                </div>
+                                <div class="tt-dash-chart-labels">
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                    <span>Sun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tt-dash-panel tt-dash-destinations">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Trending</span>
+                                <h3>Popular Destinations</h3>
+                            </div>
+                            <a href="admin-packages.html" class="tt-dash-panel-link">Explore <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="tt-dash-destination-list">
+                            <div class="tt-dash-destination">
+                                <span class="tt-dash-destination-number">01</span>
+                                <div class="tt-dash-destination-info">
+                                    <strong>Bali</strong>
+                                    <span>Indonesia</span>
+                                </div>
+                                <div class="tt-dash-destination-value">
+                                    <strong>84</strong>
+                                    <span>Bookings</span>
+                                </div>
+                            </div>
+                            <div class="tt-dash-destination">
+                                <span class="tt-dash-destination-number">02</span>
+                                <div class="tt-dash-destination-info">
+                                    <strong>Paris</strong>
+                                    <span>France</span>
+                                </div>
+                                <div class="tt-dash-destination-value">
+                                    <strong>61</strong>
+                                    <span>Bookings</span>
+                                </div>
+                            </div>
+                            <div class="tt-dash-destination">
+                                <span class="tt-dash-destination-number">03</span>
+                                <div class="tt-dash-destination-info">
+                                    <strong>Dubai</strong>
+                                    <span>UAE</span>
+                                </div>
+                                <div class="tt-dash-destination-value">
+                                    <strong>48</strong>
+                                    <span>Bookings</span>
+                                </div>
+                            </div>
+                            <div class="tt-dash-destination">
+                                <span class="tt-dash-destination-number">04</span>
+                                <div class="tt-dash-destination-info">
+                                    <strong>Switzerland</strong>
+                                    <span>Europe</span>
+                                </div>
+                                <div class="tt-dash-destination-value">
+                                    <strong>35</strong>
+                                    <span>Bookings</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--- Management Row --->
+                <div class="tt-dash-grid">
+                    <section class="tt-dash-panel tt-dash-recent">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Management</span>
+                                <h3>Recent Bookings</h3>
+                            </div>
+                            <a href="admin-bookings.html" class="tt-dash-panel-link">View All <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="tt-dash-table-wrap">
+                            <table class="tt-dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Traveler</th>
+                                        <th>Destination</th>
+                                        <th>Package</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Arun Kumar</strong></td>
+                                        <td>Bali</td>
+                                        <td>Bali Escape</td>
+                                        <td>18 Sep 2026</td>
+                                        <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Priya S</strong></td>
+                                        <td>Switzerland</td>
+                                        <td>Swiss Adventure</td>
+                                        <td>24 Sep 2026</td>
+                                        <td><span class="tt-dash-status pending">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Rahul M</strong></td>
+                                        <td>Paris</td>
+                                        <td>Paris Romance</td>
+                                        <td>02 Oct 2026</td>
+                                        <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meena R</strong></td>
+                                        <td>Dubai</td>
+                                        <td>Dubai Escape</td>
+                                        <td>11 Oct 2026</td>
+                                        <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Vijay A</strong></td>
+                                        <td>Maldives</td>
+                                        <td>Island Retreat</td>
+                                        <td>16 Oct 2026</td>
+                                        <td><span class="tt-dash-status pending">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="tt-dash-panel tt-dash-activity">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Live Feed</span>
+                                <h3>Recent Activity</h3>
+                            </div>
+                        </div>
+                        <div class="tt-dash-activity-list">
+                            <div class="tt-dash-activity-item">
+                                <span class="tt-dash-activity-icon"><i class="bi bi-person-plus"></i></span>
+                                <div>
+                                    <strong>New traveler registered</strong>
+                                    <p>Arun Kumar joined the platform</p>
+                                    <small>8 minutes ago</small>
+                                </div>
+                            </div>
+                            <div class="tt-dash-activity-item">
+                                <span class="tt-dash-activity-icon"><i class="bi bi-airplane"></i></span>
+                                <div>
+                                    <strong>New booking received</strong>
+                                    <p>Bali Escape package booked</p>
+                                    <small>24 minutes ago</small>
+                                </div>
+                            </div>
+                            <div class="tt-dash-activity-item">
+                                <span class="tt-dash-activity-icon"><i class="bi bi-star"></i></span>
+                                <div>
+                                    <strong>New travel review</strong>
+                                    <p>5-star experience shared</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <div class="tt-dash-activity-item">
+                                <span class="tt-dash-activity-icon"><i class="bi bi-box-seam"></i></span>
+                                <div>
+                                    <strong>New package added</strong>
+                                    <p>Maldives Island Retreat</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--- Bottom Row --->
+                <div class="tt-dash-bottom-grid">
+                    <section class="tt-dash-panel tt-dash-quick">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Shortcuts</span>
+                                <h3>Quick Actions</h3>
+                            </div>
+                        </div>
+                        <div class="tt-dash-quick-grid">
+                            <a href="admin-packages.html" class="tt-dash-quick-card">
+                                <span><i class="bi bi-plus-lg"></i></span>
+                                <strong>Add Package</strong>
+                                <small>Create a new travel package</small>
+                            </a>
+                            <a href="admin-bookings.html" class="tt-dash-quick-card">
+                                <span><i class="bi bi-calendar-check"></i></span>
+                                <strong>Manage Bookings</strong>
+                                <small>Review traveler bookings</small>
+                            </a>
+                            <a href="admin-profile.html" class="tt-dash-quick-card">
+                                <span><i class="bi bi-person-gear"></i></span>
+                                <strong>Edit Profile</strong>
+                                <small>Update your account details</small>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="tt-dash-panel tt-dash-upcoming">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Coming Up</span>
+                                <h3>Upcoming Departures</h3>
+                            </div>
+                        </div>
+                        <div class="tt-dash-upcoming-list">
+                            <div class="tt-dash-upcoming-item">
+                                <div class="tt-dash-date">
+                                    <strong>18</strong>
+                                    <span>SEP</span>
+                                </div>
+                                <div>
+                                    <strong>Bali Escape</strong>
+                                    <span>12 Travelers · Indonesia</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </div>
+                            <div class="tt-dash-upcoming-item">
+                                <div class="tt-dash-date">
+                                    <strong>24</strong>
+                                    <span>SEP</span>
+                                </div>
+                                <div>
+                                    <strong>Swiss Adventure</strong>
+                                    <span>8 Travelers · Switzerland</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </div>
+                            <div class="tt-dash-upcoming-item">
+                                <div class="tt-dash-date">
+                                    <strong>02</strong>
+                                    <span>OCT</span>
+                                </div>
+                                <div>
+                                    <strong>Paris Romance</strong>
+                                    <span>6 Travelers · France</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

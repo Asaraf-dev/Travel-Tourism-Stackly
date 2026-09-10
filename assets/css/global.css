@@ -1,0 +1,616 @@
+/*--- Global ---*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --tt-primary: #0f766e;
+    --tt-primary-dark: #0b5f59;
+    --tt-secondary: #f4a261;
+    --tt-accent: #e76f51;
+    --tt-dark: #17332f;
+    --tt-heading: #17332f;
+    --tt-text: #5f6f6b;
+    --tt-light: #f7faf9;
+    --tt-white: #ffffff;
+    --tt-border: #e3ebe8;
+    --tt-shadow: 0 18px 50px rgba(23, 51, 47, 0.10);
+    --tt-radius: 18px;
+    --tt-radius-sm: 10px;
+    --tt-transition: all 0.35s ease;
+    --tt-font-primary: 'DM Sans', sans-serif;
+    --tt-font-heading: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--tt-font-primary);
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--tt-text);
+    background: var(--tt-white);
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--tt-font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--tt-heading);
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 34px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+h5 {
+    font-size: 21px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--tt-transition);
+}
+
+a:hover {
+    color: var(--tt-primary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    outline: 0;
+    border: 1px solid var(--tt-border);
+    transition: var(--tt-transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--tt-primary);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.08);
+}
+
+::selection {
+    color: var(--tt-white);
+    background: var(--tt-primary);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--tt-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tt-primary);
+    border-radius: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.tt-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.tt-section-heading {
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.tt-section-heading.text-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tt-section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: var(--tt-primary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.tt-section-kicker::before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: var(--tt-secondary);
+}
+
+.tt-section-title {
+    max-width: 720px;
+    font-size: 48px;
+}
+
+.tt-section-description {
+    max-width: 650px;
+    margin-top: 18px;
+    color: var(--tt-text);
+    font-size: 16px;
+}
+
+.tt-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    overflow: hidden;
+    transition: var(--tt-transition);
+}
+
+.tt-btn-primary {
+    color: var(--tt-white);
+    background: var(--tt-primary);
+}
+
+.tt-btn-primary:hover {
+    color: var(--tt-white);
+    background: var(--tt-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(15, 118, 110, 0.22);
+}
+
+.tt-btn-secondary {
+    color: var(--tt-heading);
+    background: var(--tt-white);
+    border: 1px solid var(--tt-border);
+}
+
+.tt-btn-secondary:hover {
+    color: var(--tt-white);
+    background: var(--tt-primary);
+    border-color: var(--tt-primary);
+    transform: translateY(-3px);
+}
+
+.tt-btn i {
+    font-size: 17px;
+    transition: var(--tt-transition);
+}
+
+.tt-btn:hover i {
+    transform: translateX(4px);
+}
+
+.tt-card {
+    background: var(--tt-white);
+    border: 1px solid var(--tt-border);
+    border-radius: var(--tt-radius);
+    box-shadow: var(--tt-shadow);
+}
+
+.tt-image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tt-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 25%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.tt-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 50px;
+    color: var(--tt-primary);
+    background: rgba(15, 118, 110, 0.10);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tt-form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.tt-form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--tt-heading);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tt-form-control {
+    height: 52px;
+    padding: 0 16px;
+    border-radius: var(--tt-radius-sm);
+    color: var(--tt-heading);
+    background: var(--tt-white);
+}
+
+textarea.tt-form-control {
+    height: 140px;
+    padding-top: 14px;
+    resize: vertical;
+}
+
+.tt-form-control::placeholder {
+    color: #9aa8a5;
+}
+
+.tt-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--tt-border);
+}
+
+.tt-text-primary {
+    color: var(--tt-primary);
+}
+
+.tt-text-secondary {
+    color: var(--tt-secondary);
+}
+
+.tt-bg-light {
+    background: var(--tt-light);
+}
+
+.tt-bg-primary {
+    background: var(--tt-primary);
+}
+
+.tt-bg-dark {
+    background: var(--tt-dark);
+}
+
+.tt-text-white {
+    color: var(--tt-white);
+}
+
+.tt-rounded {
+    border-radius: var(--tt-radius);
+}
+
+.tt-rounded-sm {
+    border-radius: var(--tt-radius-sm);
+}
+
+.tt-shadow {
+    box-shadow: var(--tt-shadow);
+}
+
+.tt-hover-up {
+    transition: var(--tt-transition);
+}
+
+.tt-hover-up:hover {
+    transform: translateY(-8px);
+}
+
+.tt-fade-up {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tt-fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tt-fade-left {
+    opacity: 0;
+    transform: translateX(-35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tt-fade-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tt-fade-right {
+    opacity: 0;
+    transform: translateX(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tt-fade-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tt-scale {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tt-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tt-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.tt-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.tt-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.tt-delay-4 {
+    transition-delay: 0.4s;
+}
+
+.tt-delay-5 {
+    transition-delay: 0.5s;
+}
+
+.tt-section-shape {
+    position: absolute;
+    pointer-events: none;
+}
+
+.tt-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width:1050px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .tt-section {
+        padding: 85px 0;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    .tt-section-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width:991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .tt-section {
+        padding: 75px 0;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .tt-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .tt-section-title {
+        font-size: 40px;
+    }
+
+    .tt-btn {
+        padding: 13px 25px;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .tt-section {
+        padding: 65px 0;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 23px;
+    }
+
+    .tt-section-heading {
+        margin-bottom: 38px;
+    }
+
+    .tt-section-title {
+        font-size: 35px;
+    }
+
+    .tt-section-description {
+        font-size: 15px;
+    }
+
+    .tt-btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:575px) {
+    .container {
+        max-width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .tt-section {
+        padding: 55px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 31px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    .tt-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .tt-section-kicker {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .tt-section-title {
+        font-size: 31px;
+    }
+
+    .tt-section-description {
+        margin-top: 14px;
+        font-size: 14px;
+    }
+
+    .tt-btn {
+        padding: 12px 20px;
+    }
+
+    .tt-form-control {
+        height: 48px;
+    }
+}

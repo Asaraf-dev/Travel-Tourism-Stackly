@@ -1,0 +1,529 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel & Tourism | Packages</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="tt-ldr" id="ttLdr">
+    <div class="tt-ldr-glow"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-one"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-two"></div>
+    <div class="tt-ldr-compass">
+      <div class="tt-ldr-compass-ring"></div>
+      <div class="tt-ldr-compass-inner">
+        <i class="bi bi-compass tt-ldr-compass-icon"></i>
+      </div>
+      <span class="tt-ldr-point tt-ldr-point-one"></span>
+      <span class="tt-ldr-point tt-ldr-point-two"></span>
+      <span class="tt-ldr-point tt-ldr-point-three"></span>
+      <span class="tt-ldr-point tt-ldr-point-four"></span>
+    </div>
+    <div class="tt-ldr-content">
+      <h2 class="tt-ldr-title">Travel<span>.</span></h2>
+      <p class="tt-ldr-message" id="ttLdrMessage">Preparing your journey...</p>
+    </div>
+    <div class="tt-ldr-route">
+      <span class="tt-ldr-route-line"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-one"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-two"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-three"></span>
+      <i class="fa-solid fa-plane tt-ldr-plane"></i>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+  <div data-navbar></div>
+
+  <!--- Sub Hero Section Start --->
+  <section class="tt-sub-hero">
+    <div class="tt-sub-hero-bg"></div>
+    <div class="tt-sub-hero-overlay"></div>
+    <div class="tt-sub-hero-shape tt-sub-hero-shape-one"></div>
+    <div class="tt-sub-hero-shape tt-sub-hero-shape-two"></div>
+    <div class="container">
+      <div class="tt-sub-hero-content">
+        <span class="tt-sub-hero-kicker"><i class="bi bi-compass"></i> Explore With Us</span>
+        <h1 class="tt-sub-hero-title">Our <span>Packages</span></h1>
+        <div class="tt-sub-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span>Packages</span>
+        </div>
+      </div>
+    </div>
+    <div class="tt-sub-hero-scroll">
+      <span>Scroll To Explore</span>
+      <div class="tt-sub-hero-scroll-line"></div>
+    </div>
+  </section>
+  <!--- Sub Hero Section End --->
+
+  <!--- Package Discovery / Smart Search Start --->
+  <!--- Package Discovery / Smart Search --->
+  <section class="tt-pkg-discovery">
+    <div class="tt-pkg-discovery-orbit tt-pkg-discovery-orbit-one"></div>
+    <div class="tt-pkg-discovery-orbit tt-pkg-discovery-orbit-two"></div>
+    <div class="container">
+      <div class="tt-pkg-discovery-head">
+        <div class="tt-pkg-discovery-heading">
+          <span class="tt-pkg-discovery-kicker"><i class="bi bi-compass"></i> Find Your Escape</span>
+          <h2 class="tt-pkg-discovery-title">Discover A Journey<br>That Feels <span>Like You.</span></h2>
+        </div>
+        <div class="tt-pkg-discovery-intro">
+          <p>Tell us what kind of journey you are looking for and explore experiences curated around the way you love to
+            travel.</p>
+        </div>
+      </div>
+      <div class="tt-pkg-discovery-search">
+        <div class="tt-pkg-discovery-search-top">
+          <div class="tt-pkg-discovery-search-label">
+            <span>Smart Trip Finder</span>
+            <small>Shape your perfect getaway</small>
+          </div>
+          <button type="button" class="tt-pkg-discovery-reset" id="ttPkgDiscoveryReset"><i
+              class="bi bi-arrow-counterclockwise"></i> Reset</button>
+        </div>
+        <div class="tt-pkg-discovery-fields">
+          <div class="tt-pkg-discovery-field">
+            <label><i class="bi bi-geo-alt"></i> Destination</label>
+            <div class="tt-pkg-discovery-select-wrap">
+              <select class="tt-pkg-discovery-select" id="ttPkgDestination">
+                <option value="all">Anywhere</option>
+                <option value="bali">Bali</option>
+                <option value="dubai">Dubai</option>
+                <option value="paris">Paris</option>
+                <option value="switzerland">Switzerland</option>
+                <option value="maldives">Maldives</option>
+                <option value="thailand">Thailand</option>
+              </select>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-field">
+            <label><i class="bi bi-heart"></i> Travel Style</label>
+            <div class="tt-pkg-discovery-select-wrap">
+              <select class="tt-pkg-discovery-select" id="ttPkgStyle">
+                <option value="all">Any Experience</option>
+                <option value="romantic">Romantic</option>
+                <option value="adventure">Adventure</option>
+                <option value="luxury">Luxury</option>
+                <option value="family">Family</option>
+                <option value="nature">Nature</option>
+              </select>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-field">
+            <label><i class="bi bi-calendar3"></i> Duration</label>
+            <div class="tt-pkg-discovery-select-wrap">
+              <select class="tt-pkg-discovery-select" id="ttPkgDuration">
+                <option value="all">Any Duration</option>
+                <option value="short">1 - 4 Days</option>
+                <option value="medium">5 - 7 Days</option>
+                <option value="long">8+ Days</option>
+              </select>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-field">
+            <label><i class="bi bi-wallet2"></i> Budget</label>
+            <div class="tt-pkg-discovery-select-wrap">
+              <select class="tt-pkg-discovery-select" id="ttPkgBudget">
+                <option value="all">Any Budget</option>
+                <option value="budget">Under ₹50K</option>
+                <option value="mid">₹50K - ₹1L</option>
+                <option value="premium">₹1L - ₹2L</option>
+                <option value="luxury">₹2L+</option>
+              </select>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+          <button type="button" class="tt-pkg-discovery-search-btn" id="ttPkgDiscoverySearch"><span>Explore
+              Trips</span><i class="bi bi-arrow-up-right"></i></button>
+        </div>
+        <div class="tt-pkg-discovery-tags">
+          <span>Popular:</span>
+          <button type="button" class="tt-pkg-discovery-tag" data-style="romantic">Honeymoon</button>
+          <button type="button" class="tt-pkg-discovery-tag" data-style="adventure">Adventure</button>
+          <button type="button" class="tt-pkg-discovery-tag" data-style="luxury">Luxury</button>
+          <button type="button" class="tt-pkg-discovery-tag" data-style="family">Family</button>
+        </div>
+      </div>
+      <div class="tt-pkg-discovery-result-head">
+        <div>
+          <span class="tt-pkg-discovery-result-kicker">Curated For You</span>
+          <h3>Trips Worth <span>Taking.</span></h3>
+        </div>
+        <div class="tt-pkg-discovery-result-count"><strong id="ttPkgResultCount">6</strong> journeys found</div>
+      </div>
+      <div class="tt-pkg-discovery-grid" id="ttPkgDiscoveryGrid">
+        <article class="tt-pkg-discovery-card" data-destination="bali" data-style="romantic" data-duration="medium"
+          data-budget="mid">
+          <div class="tt-pkg-discovery-image">
+            <img src="assets/images/package-bali.webp" alt="Bali Escape" class="tt-pkg-discovery-img">
+            <span class="tt-pkg-discovery-badge"><i class="bi bi-fire"></i> Trending</span>
+            <button type="button" class="tt-pkg-discovery-wishlist" aria-label="Add Bali Escape to wishlist"><i
+                class="bi bi-heart"></i></button>
+            <div class="tt-pkg-discovery-image-bottom">
+              <span><i class="bi bi-star-fill"></i> 4.9</span>
+              <span><i class="bi bi-clock"></i> 6 Days</span>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-card-body">
+            <span class="tt-pkg-discovery-location"><i class="bi bi-geo-alt-fill"></i> Bali, Indonesia</span>
+            <h4>Bali Escape</h4>
+            <p>Island sunsets, private villas and unforgettable tropical moments.</p>
+            <div class="tt-pkg-discovery-card-bottom">
+              <div><small>Starting from</small><strong>₹68,999</strong></div>
+              <a href="404.html" class="tt-pkg-discovery-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="tt-pkg-discovery-card" data-destination="dubai" data-style="luxury" data-duration="short"
+          data-budget="premium">
+          <div class="tt-pkg-discovery-image">
+            <img src="assets/images/experience-luxury.webp" alt="Dubai Luxury" class="tt-pkg-discovery-img">
+            <span class="tt-pkg-discovery-badge"><i class="bi bi-gem"></i> Premium</span>
+            <button type="button" class="tt-pkg-discovery-wishlist" aria-label="Add Dubai Luxury to wishlist"><i
+                class="bi bi-heart"></i></button>
+            <div class="tt-pkg-discovery-image-bottom">
+              <span><i class="bi bi-star-fill"></i> 4.8</span>
+              <span><i class="bi bi-clock"></i> 4 Days</span>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-card-body">
+            <span class="tt-pkg-discovery-location"><i class="bi bi-geo-alt-fill"></i> Dubai, UAE</span>
+            <h4>Dubai Luxury</h4>
+            <p>Skyline views, desert adventures and a taste of extraordinary luxury.</p>
+            <div class="tt-pkg-discovery-card-bottom">
+              <div><small>Starting from</small><strong>₹1,28,999</strong></div>
+              <a href="404.html" class="tt-pkg-discovery-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="tt-pkg-discovery-card" data-destination="paris" data-style="romantic" data-duration="long"
+          data-budget="premium">
+          <div class="tt-pkg-discovery-image">
+            <img src="assets/images/package-paris.webp" alt="Paris Romance" class="tt-pkg-discovery-img">
+            <span class="tt-pkg-discovery-badge"><i class="bi bi-heart-fill"></i> Romantic</span>
+            <button type="button" class="tt-pkg-discovery-wishlist" aria-label="Add Paris Romance to wishlist"><i
+                class="bi bi-heart"></i></button>
+            <div class="tt-pkg-discovery-image-bottom">
+              <span><i class="bi bi-star-fill"></i> 4.9</span>
+              <span><i class="bi bi-clock"></i> 8 Days</span>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-card-body">
+            <span class="tt-pkg-discovery-location"><i class="bi bi-geo-alt-fill"></i> Paris, France</span>
+            <h4>Paris Romance</h4>
+            <p>Elegant streets, intimate moments and the timeless magic of Paris.</p>
+            <div class="tt-pkg-discovery-card-bottom">
+              <div><small>Starting from</small><strong>₹1,46,999</strong></div>
+              <a href="404.html" class="tt-pkg-discovery-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="tt-pkg-discovery-card" data-destination="switzerland" data-style="adventure"
+          data-duration="long" data-budget="luxury">
+          <div class="tt-pkg-discovery-image">
+            <img src="assets/images/switzerland-adventure.webp" alt="Switzerland Adventure"
+              class="tt-pkg-discovery-img">
+            <span class="tt-pkg-discovery-badge"><i class="bi bi-compass"></i> Adventure</span>
+            <button type="button" class="tt-pkg-discovery-wishlist"
+              aria-label="Add Switzerland Adventure to wishlist"><i class="bi bi-heart"></i></button>
+            <div class="tt-pkg-discovery-image-bottom">
+              <span><i class="bi bi-star-fill"></i> 4.9</span>
+              <span><i class="bi bi-clock"></i> 10 Days</span>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-card-body">
+            <span class="tt-pkg-discovery-location"><i class="bi bi-geo-alt-fill"></i> Switzerland</span>
+            <h4>Swiss Adventure</h4>
+            <p>Alpine railways, dramatic peaks and breathtaking mountain escapes.</p>
+            <div class="tt-pkg-discovery-card-bottom">
+              <div><small>Starting from</small><strong>₹2,18,999</strong></div>
+              <a href="404.html" class="tt-pkg-discovery-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="tt-pkg-discovery-card" data-destination="maldives" data-style="luxury" data-duration="short"
+          data-budget="luxury">
+          <div class="tt-pkg-discovery-image">
+            <img src="assets/images/package-maldives.webp" alt="Maldives Retreat" class="tt-pkg-discovery-img">
+            <span class="tt-pkg-discovery-badge"><i class="bi bi-stars"></i> Exclusive</span>
+            <button type="button" class="tt-pkg-discovery-wishlist" aria-label="Add Maldives Retreat to wishlist"><i
+                class="bi bi-heart"></i></button>
+            <div class="tt-pkg-discovery-image-bottom">
+              <span><i class="bi bi-star-fill"></i> 5.0</span>
+              <span><i class="bi bi-clock"></i> 4 Days</span>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-card-body">
+            <span class="tt-pkg-discovery-location"><i class="bi bi-geo-alt-fill"></i> Maldives</span>
+            <h4>Maldives Retreat</h4>
+            <p>Overwater villas, turquoise lagoons and pure island serenity.</p>
+            <div class="tt-pkg-discovery-card-bottom">
+              <div><small>Starting from</small><strong>₹1,92,999</strong></div>
+              <a href="404.html" class="tt-pkg-discovery-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="tt-pkg-discovery-card" data-destination="thailand" data-style="family" data-duration="medium"
+          data-budget="budget">
+          <div class="tt-pkg-discovery-image">
+            <img src="assets/images/thailand-family.webp" alt="Thailand Family Escape" class="tt-pkg-discovery-img">
+            <span class="tt-pkg-discovery-badge"><i class="bi bi-people"></i> Family</span>
+            <button type="button" class="tt-pkg-discovery-wishlist"
+              aria-label="Add Thailand Family Escape to wishlist"><i class="bi bi-heart"></i></button>
+            <div class="tt-pkg-discovery-image-bottom">
+              <span><i class="bi bi-star-fill"></i> 4.7</span>
+              <span><i class="bi bi-clock"></i> 6 Days</span>
+            </div>
+          </div>
+          <div class="tt-pkg-discovery-card-body">
+            <span class="tt-pkg-discovery-location"><i class="bi bi-geo-alt-fill"></i> Thailand</span>
+            <h4>Thailand Family Escape</h4>
+            <p>Beautiful beaches, exciting experiences and memories for everyone.</p>
+            <div class="tt-pkg-discovery-card-bottom">
+              <div><small>Starting from</small><strong>₹46,999</strong></div>
+              <a href="404.html" class="tt-pkg-discovery-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="tt-pkg-discovery-empty" id="ttPkgDiscoveryEmpty">
+        <span><i class="bi bi-map"></i></span>
+        <h3>No journey found</h3>
+        <p>Try changing your filters and discover another experience.</p>
+        <button type="button" id="ttPkgDiscoveryEmptyReset">Explore All Trips</button>
+      </div>
+    </div>
+  </section>
+  <!--- Package Discovery / Smart Search End --->
+
+  <!--- Handpicked For You Section Start --->
+  <section class="tt-pkg-handpicked">
+    <div class="tt-pkg-handpicked-bg-shape tt-pkg-handpicked-bg-shape-one"></div>
+    <div class="tt-pkg-handpicked-bg-shape tt-pkg-handpicked-bg-shape-two"></div>
+    <div class="container">
+      <div class="tt-pkg-handpicked-head">
+        <div class="tt-pkg-handpicked-heading">
+          <span class="tt-pkg-handpicked-kicker"><i class="bi bi-stars"></i> Handpicked For You</span>
+          <h2 class="tt-pkg-handpicked-title">Journeys Chosen<br>With <span>Intention.</span></h2>
+        </div>
+        <div class="tt-pkg-handpicked-intro">
+          <p>Not every journey needs to be searched for. Some are simply worth discovering.</p>
+          <a href="contact.html" class="tt-pkg-handpicked-expert-link">Find My Perfect Trip <i
+              class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <!--- Handpicked Cards --->
+      <div class="tt-pkg-handpicked-grid">
+        <article class="tt-pkg-handpicked-card tt-pkg-handpicked-card-main">
+          <div class="tt-pkg-handpicked-image">
+            <img src="assets/images/kyoto-serenity.webp" alt="Kyoto Serenity" class="tt-pkg-handpicked-img">
+            <div class="tt-pkg-handpicked-overlay"></div>
+            <span class="tt-pkg-handpicked-label"><i class="bi bi-stars"></i> Editor's Pick</span>
+            <div class="tt-pkg-handpicked-content">
+              <span class="tt-pkg-handpicked-location"><i class="bi bi-geo-alt-fill"></i> Kyoto, Japan</span>
+              <h3>Kyoto Serenity</h3>
+              <p>Ancient temples, peaceful gardens and timeless Japanese traditions woven into a beautiful escape.</p>
+              <div class="tt-pkg-handpicked-meta">
+                <span><i class="bi bi-calendar3"></i> 7 Days / 6 Nights</span>
+                <span><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <div class="tt-pkg-handpicked-bottom">
+                <div class="tt-pkg-handpicked-price">
+                  <small>Starting from</small>
+                  <strong>₹1,18,999</strong>
+                </div>
+                <a href="404.html" class="tt-pkg-handpicked-arrow"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="tt-pkg-handpicked-side">
+          <article class="tt-pkg-handpicked-card tt-pkg-handpicked-card-small">
+            <div class="tt-pkg-handpicked-image">
+              <img src="assets/images/santorini-escape.webp" alt="Santorini Escape" class="tt-pkg-handpicked-img">
+              <div class="tt-pkg-handpicked-overlay"></div>
+              <span class="tt-pkg-handpicked-label"><i class="bi bi-sun"></i> Romantic</span>
+              <div class="tt-pkg-handpicked-content">
+                <span class="tt-pkg-handpicked-location"><i class="bi bi-geo-alt-fill"></i> Santorini, Greece</span>
+                <h3>Santorini Escape</h3>
+                <div class="tt-pkg-handpicked-small-bottom">
+                  <span>6 Days</span>
+                  <strong>₹1,34,999</strong>
+                  <a href="404.html" class="tt-pkg-handpicked-small-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="tt-pkg-handpicked-card tt-pkg-handpicked-card-small">
+            <div class="tt-pkg-handpicked-image">
+              <img src="assets/images/queenstown-adventure.webp" alt="Queenstown Adventure"
+                class="tt-pkg-handpicked-img">
+              <div class="tt-pkg-handpicked-overlay"></div>
+              <span class="tt-pkg-handpicked-label"><i class="bi bi-compass"></i> Adventure</span>
+              <div class="tt-pkg-handpicked-content">
+                <span class="tt-pkg-handpicked-location"><i class="bi bi-geo-alt-fill"></i> Queenstown, New
+                  Zealand</span>
+                <h3>Queenstown Adventure</h3>
+                <div class="tt-pkg-handpicked-small-bottom">
+                  <span>9 Days</span>
+                  <strong>₹1,86,999</strong>
+                  <a href="404.html" class="tt-pkg-handpicked-small-arrow"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="tt-pkg-handpicked-note">
+        <div class="tt-pkg-handpicked-note-icon"><i class="bi bi-magic"></i></div>
+        <div class="tt-pkg-handpicked-note-text">
+          <strong>Curated, not crowded.</strong>
+          <span>We choose experiences that give you more stories to take home.</span>
+        </div>
+        <div class="tt-pkg-handpicked-note-line"></div>
+        <span class="tt-pkg-handpicked-note-number">03 <small>CURATED TRIPS</small></span>
+      </div>
+    </div>
+  </section>
+  <!--- Handpicked For You Section End --->
+
+  <!--- Package Benefits Section Start ---><!--- Package Benefits --->
+<section class="tt-pkg-benefits">
+    <div class="container">
+        <div class="tt-pkg-benefits-wrap">
+            <div class="tt-pkg-benefits-intro">
+                <span class="tt-pkg-benefits-kicker"><i class="bi bi-gem"></i> Why Book With Us</span>
+                <h2 class="tt-pkg-benefits-title">More Than A<br><span>Holiday.</span></h2>
+                <p class="tt-pkg-benefits-description">Every package is designed to make your journey easier, richer and more memorable from the moment you book.</p>
+                <div class="tt-pkg-benefits-count">
+                    <strong>06</strong>
+                    <span>Travel Benefits</span>
+                </div>
+                <div class="tt-pkg-benefits-line"></div>
+            </div>
+            <div class="tt-pkg-benefits-list">
+                <div class="tt-pkg-benefit-card">
+                    <span class="tt-pkg-benefit-number">01</span>
+                    <div class="tt-pkg-benefit-icon"><i class="bi bi-signpost-2"></i></div>
+                    <div class="tt-pkg-benefit-content">
+                        <h3>Thoughtfully Planned</h3>
+                        <p>Well-balanced itineraries that give you the freedom to explore without the stress of planning everything yourself.</p>
+                    </div>
+                    <span class="tt-pkg-benefit-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+                <div class="tt-pkg-benefit-card">
+                    <span class="tt-pkg-benefit-number">02</span>
+                    <div class="tt-pkg-benefit-icon"><i class="bi bi-wallet2"></i></div>
+                    <div class="tt-pkg-benefit-content">
+                        <h3>Transparent Pricing</h3>
+                        <p>No confusing surprises. Know what your package includes and enjoy a clear, comfortable travel budget.</p>
+                    </div>
+                    <span class="tt-pkg-benefit-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+                <div class="tt-pkg-benefit-card">
+                    <span class="tt-pkg-benefit-number">03</span>
+                    <div class="tt-pkg-benefit-icon"><i class="bi bi-headset"></i></div>
+                    <div class="tt-pkg-benefit-content">
+                        <h3>Travel Support</h3>
+                        <p>Our team is there when you need us, helping you travel with confidence before and during your journey.</p>
+                    </div>
+                    <span class="tt-pkg-benefit-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+                <div class="tt-pkg-benefit-card">
+                    <span class="tt-pkg-benefit-number">04</span>
+                    <div class="tt-pkg-benefit-icon"><i class="bi bi-building-check"></i></div>
+                    <div class="tt-pkg-benefit-content">
+                        <h3>Handpicked Stays</h3>
+                        <p>Comfortable stays selected for their location, character and ability to make your destination feel special.</p>
+                    </div>
+                    <span class="tt-pkg-benefit-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+                <div class="tt-pkg-benefit-card">
+                    <span class="tt-pkg-benefit-number">05</span>
+                    <div class="tt-pkg-benefit-icon"><i class="bi bi-airplane"></i></div>
+                    <div class="tt-pkg-benefit-content">
+                        <h3>Seamless Transfers</h3>
+                        <p>From airport arrivals to local connections, we help keep the important parts of your journey moving smoothly.</p>
+                    </div>
+                    <span class="tt-pkg-benefit-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+                <div class="tt-pkg-benefit-card">
+                    <span class="tt-pkg-benefit-number">06</span>
+                    <div class="tt-pkg-benefit-icon"><i class="bi bi-heart"></i></div>
+                    <div class="tt-pkg-benefit-content">
+                        <h3>Made For Memories</h3>
+                        <p>Unique experiences and meaningful moments carefully woven into every trip you choose with us.</p>
+                    </div>
+                    <span class="tt-pkg-benefit-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!--- Package Benefits Section End --->
+
+
+  <div data-footer></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/packages.js"></script>
+</body>
+
+</html>

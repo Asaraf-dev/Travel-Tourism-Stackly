@@ -1,0 +1,602 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel & Tourism | Home</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="tt-ldr" id="ttLdr">
+    <div class="tt-ldr-glow"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-one"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-two"></div>
+    <div class="tt-ldr-compass">
+      <div class="tt-ldr-compass-ring"></div>
+      <div class="tt-ldr-compass-inner">
+        <i class="bi bi-compass tt-ldr-compass-icon"></i>
+      </div>
+      <span class="tt-ldr-point tt-ldr-point-one"></span>
+      <span class="tt-ldr-point tt-ldr-point-two"></span>
+      <span class="tt-ldr-point tt-ldr-point-three"></span>
+      <span class="tt-ldr-point tt-ldr-point-four"></span>
+    </div>
+    <div class="tt-ldr-content">
+      <h2 class="tt-ldr-title">Travel<span>.</span></h2>
+      <p class="tt-ldr-message" id="ttLdrMessage">Preparing your journey...</p>
+    </div>
+    <div class="tt-ldr-route">
+      <span class="tt-ldr-route-line"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-one"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-two"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-three"></span>
+      <i class="fa-solid fa-plane tt-ldr-plane"></i>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+  <div data-navbar></div>
+
+  <!--- Hero Section Start --->
+  <section class="tt-ind-hero" id="home">
+    <div class="tt-ind-hero-bg">
+      <img src="assets/images/hero-bg-img.webp" alt="Beautiful travel destination" class="tt-ind-hero-bg-img">
+    </div>
+    <div class="tt-ind-hero-overlay"></div>
+    <div class="tt-ind-hero-shape tt-ind-hero-shape-one"></div>
+    <div class="tt-ind-hero-shape tt-ind-hero-shape-two"></div>
+    <div class="container">
+      <div class="tt-ind-hero-content">
+        <div class="tt-ind-hero-copy">
+          <span class="tt-ind-hero-kicker"><i class="bi bi-compass"></i> Discover Beyond Boundaries</span>
+          <h1 class="tt-ind-hero-title">Where will your <br><span>journey</span> take you?</h1>
+          <p class="tt-ind-hero-description">Find extraordinary destinations, unforgettable experiences, and journeys
+            designed around the way you love to travel.</p>
+        </div>
+        <div class="tt-ind-hero-search">
+          <div class="tt-ind-hero-search-top">
+            <span class="tt-ind-hero-search-label"><i class="bi bi-search"></i> Plan Your Journey</span>
+            <span class="tt-ind-hero-search-status"><i class="bi bi-circle-fill"></i> Ready to explore</span>
+          </div>
+          <div class="tt-ind-hero-search-fields">
+            <div class="tt-ind-hero-field">
+              <span class="tt-ind-hero-field-icon"><i class="bi bi-geo-alt"></i></span>
+              <div class="tt-ind-hero-field-content">
+                <label for="ttIndHeroDestination">Where to?</label>
+                <select id="ttIndHeroDestination">
+                  <option value="">Choose destination</option>
+                  <option value="bali">Bali, Indonesia</option>
+                  <option value="dubai">Dubai, UAE</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="paris">Paris, France</option>
+                  <option value="switzerland">Switzerland</option>
+                  <option value="singapore">Singapore</option>
+                </select>
+              </div>
+            </div>
+            <div class="tt-ind-hero-field">
+              <span class="tt-ind-hero-field-icon"><i class="bi bi-calendar3"></i></span>
+              <div class="tt-ind-hero-field-content">
+                <label for="ttIndHeroDate">When?</label>
+                <input type="date" id="ttIndHeroDate">
+              </div>
+            </div>
+            <div class="tt-ind-hero-field">
+              <span class="tt-ind-hero-field-icon"><i class="bi bi-people"></i></span>
+              <div class="tt-ind-hero-field-content">
+                <label for="ttIndHeroTravelers">Travelers</label>
+                <select id="ttIndHeroTravelers">
+                  <option value="1">1 Traveler</option>
+                  <option value="2">2 Travelers</option>
+                  <option value="3">3 Travelers</option>
+                  <option value="4">4 Travelers</option>
+                  <option value="5">5+ Travelers</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="tt-ind-hero-search-btn" id="ttIndHeroSearchBtn">
+              <span>Explore</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="tt-ind-hero-bottom">
+          <div class="tt-ind-hero-stats">
+            <div class="tt-ind-hero-stat">
+              <strong>120+</strong>
+              <span>Destinations</span>
+            </div>
+            <div class="tt-ind-hero-stat-divider"></div>
+            <div class="tt-ind-hero-stat">
+              <strong>500+</strong>
+              <span>Travel Experiences</span>
+            </div>
+            <div class="tt-ind-hero-stat-divider"></div>
+            <div class="tt-ind-hero-stat">
+              <strong>15K+</strong>
+              <span>Happy Travelers</span>
+            </div>
+          </div>
+          <div class="tt-ind-hero-scroll">
+            <span>Scroll to explore</span>
+            <i class="bi bi-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Hero Section End --->
+
+  <!--- About Us Section Start --->
+  <section class="tt-ind-about">
+    <div class="container">
+      <div class="tt-ind-about-wrap">
+        <div class="tt-ind-about-visual">
+          <div class="tt-ind-about-image-main">
+            <img src="assets/images/about-main.webp" alt="Travel experience" class="tt-ind-about-image">
+            <div class="tt-ind-about-image-overlay"></div>
+          </div>
+          <div class="tt-ind-about-image-small">
+            <img src="assets/images/about-small.webp" alt="Beautiful travel destination" class="tt-ind-about-small-img">
+          </div>
+          <div class="tt-ind-about-location">
+            <span class="tt-ind-about-location-icon"><i class="bi bi-geo-alt-fill"></i></span>
+            <div class="tt-ind-about-location-content">
+              <strong>Explore Somewhere</strong>
+              <span>Beautiful places await</span>
+            </div>
+          </div>
+          <div class="tt-ind-about-experience">
+            <span class="tt-ind-about-experience-number">12</span>
+            <span class="tt-ind-about-experience-text">Years of<br>Travel Stories</span>
+          </div>
+          <span class="tt-ind-about-circle tt-ind-about-circle-one"></span>
+          <span class="tt-ind-about-circle tt-ind-about-circle-two"></span>
+        </div>
+        <div class="tt-ind-about-content">
+          <span class="tt-ind-about-kicker"><i class="bi bi-compass"></i> About Our Journey</span>
+          <h2 class="tt-ind-about-title">Travel is not just a destination, <span>it's a feeling.</span></h2>
+          <p class="tt-ind-about-text">We believe every journey should become a story worth telling. From hidden escapes
+            to iconic destinations, we create thoughtfully planned travel experiences that bring you closer to the
+            places and moments that matter.</p>
+          <p class="tt-ind-about-text">Our passion is simple — make discovering the world easier, more meaningful, and
+            genuinely unforgettable.</p>
+          <div class="tt-ind-about-highlights">
+            <div class="tt-ind-about-highlight">
+              <span class="tt-ind-about-highlight-icon"><i class="bi bi-map"></i></span>
+              <div>
+                <strong>Curated Journeys</strong>
+                <span>Trips made around you</span>
+              </div>
+            </div>
+            <div class="tt-ind-about-highlight">
+              <span class="tt-ind-about-highlight-icon"><i class="bi bi-heart"></i></span>
+              <div>
+                <strong>Made With Care</strong>
+                <span>Every detail thoughtfully planned</span>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="tt-ind-about-btn">
+            <span>Discover Our Story</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- About Us Section End --->
+
+  <!--- Popular Destinations Section Start --->
+  <section class="tt-ind-dest">
+    <div class="container">
+      <div class="tt-ind-dest-head">
+        <div class="tt-ind-dest-heading">
+          <span class="tt-ind-dest-kicker"><i class="bi bi-globe-americas"></i> Explore The World</span>
+          <h2 class="tt-ind-dest-title">Popular <span>Destinations</span></h2>
+        </div>
+        <div class="tt-ind-dest-head-right">
+          <p class="tt-ind-dest-description">From tropical escapes to timeless cities, discover places that turn
+            ordinary trips into unforgettable stories.</p>
+          <a href="packages.html" class="tt-ind-dest-view-btn">
+            <span>View All Destinations</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="tt-ind-dest-grid">
+        <a href="packages.html" class="tt-ind-dest-card tt-ind-dest-card-large">
+          <img src="assets/images/destination-bali.webp" alt="Bali destination" class="tt-ind-dest-image">
+          <div class="tt-ind-dest-overlay"></div>
+          <div class="tt-ind-dest-number">01</div>
+          <div class="tt-ind-dest-content">
+            <span class="tt-ind-dest-country"><i class="bi bi-geo-alt-fill"></i> Indonesia</span>
+            <h3>Bali</h3>
+            <p>Island of Gods</p>
+            <span class="tt-ind-dest-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+        <a href="packages.html" class="tt-ind-dest-card">
+          <img src="assets/images/destination-dubai.webp" alt="Dubai destination" class="tt-ind-dest-image">
+          <div class="tt-ind-dest-overlay"></div>
+          <div class="tt-ind-dest-number">02</div>
+          <div class="tt-ind-dest-content">
+            <span class="tt-ind-dest-country"><i class="bi bi-geo-alt-fill"></i> United Arab Emirates</span>
+            <h3>Dubai</h3>
+            <p>City of Wonders</p>
+            <span class="tt-ind-dest-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+        <a href="packages.html" class="tt-ind-dest-card">
+          <img src="assets/images/destination-maldives.webp" alt="Maldives destination" class="tt-ind-dest-image">
+          <div class="tt-ind-dest-overlay"></div>
+          <div class="tt-ind-dest-number">03</div>
+          <div class="tt-ind-dest-content">
+            <span class="tt-ind-dest-country"><i class="bi bi-geo-alt-fill"></i> Indian Ocean</span>
+            <h3>Maldives</h3>
+            <p>Paradise Found</p>
+            <span class="tt-ind-dest-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+        <a href="packages.html" class="tt-ind-dest-card tt-ind-dest-card-wide">
+          <img src="assets/images/destination-paris.webp" alt="Paris destination" class="tt-ind-dest-image">
+          <div class="tt-ind-dest-overlay"></div>
+          <div class="tt-ind-dest-number">04</div>
+          <div class="tt-ind-dest-content">
+            <span class="tt-ind-dest-country"><i class="bi bi-geo-alt-fill"></i> France</span>
+            <h3>Paris</h3>
+            <p>The City of Light</p>
+            <span class="tt-ind-dest-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="tt-ind-dest-bottom">
+        <div class="tt-ind-dest-line"></div>
+        <span>More places. More stories. More memories.</span>
+        <div class="tt-ind-dest-line"></div>
+      </div>
+    </div>
+  </section>
+  <!--- Popular Destinations Section End --->
+
+  <!--- Featured Packages Section Start --->
+  <section class="tt-ind-pack">
+    <div class="container">
+      <div class="tt-ind-pack-head">
+        <div class="tt-ind-pack-heading">
+          <span class="tt-ind-pack-kicker"><i class="bi bi-stars"></i> Handpicked For You</span>
+          <h2 class="tt-ind-pack-title">Featured <span>Packages</span></h2>
+        </div>
+        <div class="tt-ind-pack-head-right">
+          <p class="tt-ind-pack-description">Carefully crafted journeys that combine beautiful destinations,
+            unforgettable experiences, and effortless travel.</p>
+          <a href="packages.html" class="tt-ind-pack-view">Explore All <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="tt-ind-pack-layout">
+        <article class="tt-ind-pack-featured">
+          <div class="tt-ind-pack-featured-image">
+            <img src="assets/images/package-bali.webp" alt="Bali escape package" class="tt-ind-pack-image">
+            <span class="tt-ind-pack-badge"><i class="bi bi-fire"></i> Most Loved</span>
+            <div class="tt-ind-pack-image-bottom">
+              <span><i class="bi bi-geo-alt-fill"></i> Bali, Indonesia</span>
+              <span><i class="bi bi-clock"></i> 6 Days / 5 Nights</span>
+            </div>
+          </div>
+          <div class="tt-ind-pack-featured-content">
+            <div class="tt-ind-pack-featured-top">
+              <div>
+                <span class="tt-ind-pack-category">Tropical Escape</span>
+                <h3>Bali Island Adventure</h3>
+              </div>
+              <div class="tt-ind-pack-rating"><i class="bi bi-star-fill"></i> 4.9</div>
+            </div>
+            <p>Experience Bali's beaches, temples, lush landscapes, and unforgettable island moments in one beautifully
+              planned journey.</p>
+            <div class="tt-ind-pack-featured-bottom">
+              <div class="tt-ind-pack-price"><span>Starting from</span><strong>₹49,999</strong><small>/ person</small>
+              </div>
+              <a href="packages.html" class="tt-ind-pack-arrow"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <div class="tt-ind-pack-list">
+          <article class="tt-ind-pack-card">
+            <div class="tt-ind-pack-card-image">
+              <img src="assets/images/package-dubai.webp" alt="Dubai holiday package" class="tt-ind-pack-card-img">
+              <span class="tt-ind-pack-card-number">01</span>
+            </div>
+            <div class="tt-ind-pack-card-content">
+              <div class="tt-ind-pack-card-top">
+                <span class="tt-ind-pack-category">Luxury Escape</span>
+                <span class="tt-ind-pack-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <h3>Dubai Discovery</h3>
+              <span class="tt-ind-pack-meta"><i class="bi bi-clock"></i> 5 Days / 4 Nights</span>
+              <div class="tt-ind-pack-card-bottom">
+                <strong>₹39,999 <small>/ person</small></strong>
+                <a href="packages.html" class="tt-ind-pack-card-btn"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="tt-ind-pack-card">
+            <div class="tt-ind-pack-card-image">
+              <img src="assets/images/package-maldives.webp" alt="Maldives holiday package"
+                class="tt-ind-pack-card-img">
+              <span class="tt-ind-pack-card-number">02</span>
+            </div>
+            <div class="tt-ind-pack-card-content">
+              <div class="tt-ind-pack-card-top">
+                <span class="tt-ind-pack-category">Romantic Getaway</span>
+                <span class="tt-ind-pack-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <h3>Maldives Serenity</h3>
+              <span class="tt-ind-pack-meta"><i class="bi bi-clock"></i> 4 Days / 3 Nights</span>
+              <div class="tt-ind-pack-card-bottom">
+                <strong>₹54,999 <small>/ person</small></strong>
+                <a href="packages.html" class="tt-ind-pack-card-btn"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="tt-ind-pack-card">
+            <div class="tt-ind-pack-card-image">
+              <img src="assets/images/package-paris.webp" alt="Paris holiday package" class="tt-ind-pack-card-img">
+              <span class="tt-ind-pack-card-number">03</span>
+            </div>
+            <div class="tt-ind-pack-card-content">
+              <div class="tt-ind-pack-card-top">
+                <span class="tt-ind-pack-category">European Escape</span>
+                <span class="tt-ind-pack-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <h3>Paris In A Story</h3>
+              <span class="tt-ind-pack-meta"><i class="bi bi-clock"></i> 7 Days / 6 Nights</span>
+              <div class="tt-ind-pack-card-bottom">
+                <strong>₹79,999 <small>/ person</small></strong>
+                <a href="packages.html" class="tt-ind-pack-card-btn"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="tt-ind-pack-bottom">
+        <span>Not sure where to go?</span>
+        <a href="contact.html">Let us plan it for you <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Featured Packages Section End --->
+
+  <!--- Explore By Experience Section Start --->
+  <section class="tt-ind-exp">
+    <div class="container">
+      <div class="tt-ind-exp-head">
+        <div class="tt-ind-exp-heading">
+          <span class="tt-ind-exp-kicker"><i class="bi bi-compass"></i> Travel Your Way</span>
+          <h2 class="tt-ind-exp-title">Explore By <span>Experience</span></h2>
+        </div>
+        <div class="tt-ind-exp-head-right">
+          <p class="tt-ind-exp-description">Choose the feeling you want to take home. From slow escapes to wild
+            adventures, find a journey made around your kind of travel.</p>
+        </div>
+      </div>
+      <div class="tt-ind-exp-showcase">
+        <a class="tt-ind-exp-card">
+          <img src="assets/images/experience-adventure.webp" alt="Adventure travel experience" class="tt-ind-exp-image">
+          <div class="tt-ind-exp-overlay"></div>
+          <span class="tt-ind-exp-number">01</span>
+          <div class="tt-ind-exp-card-content">
+            <span class="tt-ind-exp-icon"><i class="bi bi-signpost-2"></i></span>
+            <div>
+              <span class="tt-ind-exp-label">For The Fearless</span>
+              <h3>Adventure</h3>
+            </div>
+
+          </div>
+        </a>
+        <a class="tt-ind-exp-card">
+          <img src="assets/images/experience-beach.webp" alt="Beach travel experience" class="tt-ind-exp-image">
+          <div class="tt-ind-exp-overlay"></div>
+          <span class="tt-ind-exp-number">02</span>
+          <div class="tt-ind-exp-card-content">
+            <span class="tt-ind-exp-icon"><i class="bi bi-water"></i></span>
+            <div>
+              <span class="tt-ind-exp-label">For The Dreamers</span>
+              <h3>Beach</h3>
+            </div>
+
+          </div>
+        </a>
+        <a class="tt-ind-exp-card">
+          <img src="assets/images/experience-luxury.webp" alt="Luxury travel experience" class="tt-ind-exp-image">
+          <div class="tt-ind-exp-overlay"></div>
+          <span class="tt-ind-exp-number">03</span>
+          <div class="tt-ind-exp-card-content">
+            <span class="tt-ind-exp-icon"><i class="bi bi-gem"></i></span>
+            <div>
+              <span class="tt-ind-exp-label">For The Indulgent</span>
+              <h3>Luxury</h3>
+            </div>
+
+          </div>
+        </a>
+        <a class="tt-ind-exp-card">
+          <img src="assets/images/experience-culture.webp" alt="Cultural travel experience" class="tt-ind-exp-image">
+          <div class="tt-ind-exp-overlay"></div>
+          <span class="tt-ind-exp-number">04</span>
+          <div class="tt-ind-exp-card-content">
+            <span class="tt-ind-exp-icon"><i class="bi bi-buildings"></i></span>
+            <div>
+              <span class="tt-ind-exp-label">For The Curious</span>
+              <h3>Culture</h3>
+            </div>
+
+          </div>
+        </a>
+        <a class="tt-ind-exp-card">
+          <img src="assets/images/experience-romantic.webp" alt="Romantic travel experience" class="tt-ind-exp-image">
+          <div class="tt-ind-exp-overlay"></div>
+          <span class="tt-ind-exp-number">05</span>
+          <div class="tt-ind-exp-card-content">
+            <span class="tt-ind-exp-icon"><i class="bi bi-heart"></i></span>
+            <div>
+              <span class="tt-ind-exp-label">For The Two Of You</span>
+              <h3>Romantic</h3>
+            </div>
+
+          </div>
+        </a>
+      </div>
+      <div class="tt-ind-exp-footer">
+        <div class="tt-ind-exp-footer-left">
+          <span class="tt-ind-exp-footer-count">05</span>
+          <span>ways to experience the world</span>
+        </div>
+        <a href="packages.html" class="tt-ind-exp-footer-link">Find Your Experience <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Explore By Experience Section End --->
+
+  <!--- Customer Experiences Section Start --->
+  <section class="tt-ind-expn">
+    <div class="container">
+      <div class="tt-ind-expn-head">
+        <div class="tt-ind-expn-heading">
+          <span class="tt-ind-expn-kicker"><i class="bi bi-chat-heart"></i> Stories From The Road</span>
+          <h2 class="tt-ind-expn-title">Customer <span>Experiences</span></h2>
+        </div>
+        <div class="tt-ind-expn-head-right">
+          <p class="tt-ind-expn-description">Real journeys, real memories, and stories from travelers who trusted us to
+            make their next adventure special.</p>
+        </div>
+      </div>
+      <div class="tt-ind-expn-main">
+        <div class="tt-ind-expn-visual">
+          <div class="tt-ind-expn-image-wrap">
+            <img src="assets/images/customer-experience.webp" alt="Happy travelers enjoying their journey"
+              class="tt-ind-expn-image">
+            <div class="tt-ind-expn-image-shade"></div>
+            <span class="tt-ind-expn-trip-tag"><i class="bi bi-geo-alt-fill"></i> Bali, Indonesia</span>
+            <a href="404.html"><div class="tt-ind-expn-play">
+              <i class="bi bi-play-fill"></i>
+            </div></a>
+          </div>
+          <div class="tt-ind-expn-travel-note">
+            <span class="tt-ind-expn-note-icon"><i class="bi bi-camera"></i></span>
+            <div>
+              <strong>A memory worth keeping</strong>
+              <span>Captured on their Bali escape</span>
+            </div>
+          </div>
+        </div>
+        <div class="tt-ind-expn-review">
+          <div class="tt-ind-expn-review-top">
+            <span class="tt-ind-expn-quote"><i class="bi bi-quote"></i></span>
+            <div class="tt-ind-expn-rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <blockquote>“It wasn't just a vacation. Every little detail felt thoughtfully planned, and we could simply
+            enjoy the journey without worrying about anything.”</blockquote>
+          <div class="tt-ind-expn-divider"></div>
+          <div class="tt-ind-expn-customer">
+            <div class="tt-ind-expn-avatar">
+              <img src="assets/images/client-1.webp" alt="Customer" class="tt-ind-expn-avatar-img">
+            </div>
+            <div class="tt-ind-expn-customer-info">
+              <strong>Arjun & Meera</strong>
+              <span>Honeymoon Travelers</span>
+            </div>
+            <span class="tt-ind-expn-verified"><i class="bi bi-patch-check-fill"></i> Verified Trip</span>
+          </div>
+          <div class="tt-ind-expn-review-bottom">
+            <span><strong>4.9/5</strong> average traveler rating</span>
+            <a href="contact.html">Plan My Journey <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="tt-ind-expn-stats">
+        <div class="tt-ind-expn-stat">
+          <strong>2,500+</strong>
+          <span>Happy Travelers</span>
+        </div>
+        <div class="tt-ind-expn-stat">
+          <strong>4.9/5</strong>
+          <span>Average Rating</span>
+        </div>
+        <div class="tt-ind-expn-stat">
+          <strong>98%</strong>
+          <span>Would Recommend Us</span>
+        </div>
+        <div class="tt-ind-expn-stat">
+          <strong>45+</strong>
+          <span>Countries Explored</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Customer Experiences Section End --->
+
+
+
+  <div data-footer></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

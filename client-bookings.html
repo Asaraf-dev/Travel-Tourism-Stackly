@@ -1,0 +1,642 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="tt-dash">
+        <!--- Mobile Overlay --->
+        <div class="tt-dash-overlay" id="ttDashOverlay"></div>
+        <!--- Sidebar --->
+        <aside class="tt-dash-sidebar" id="ttDashSidebar">
+            <div class="tt-dash-sidebar-top">
+                <a href="index.html" class="tt-dash-logo">
+                    <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                </a>
+                <div class="tt-dash-sidebar-profile">
+                    <div class="tt-dash-sidebar-profile-img">
+                        <img src="assets/images/profile-2.webp" alt="Profile">
+                    </div>
+                    <div class="tt-dash-sidebar-profile-info">
+                        <strong class="tt-dash-user-name">Traveler</strong>
+                        <span class="tt-dash-user-email"></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="tt-dash-sidebar-nav">
+                <a href="client-dashboard.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="client-bookings.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-airplane"></i></span>
+                    <span>Bookings</span>
+                </a>
+                <a href="client-payment.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-credit-card"></i></span>
+                    <span>Payment</span>
+                </a>
+                <a href="client-profile.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-person-circle"></i></span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="tt-dash-sidebar-bottom">
+                <a href="login.html" class="tt-dash-logout" id="ttDashLogout">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="tt-dash-main">
+            <!--- Topbar --->
+            <header class="tt-dash-topbar">
+                <div class="tt-dash-topbar-left">
+                    <button type="button" class="tt-dash-menu-btn" id="ttDashMenuBtn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="tt-dash-topbar-title">
+                        <span>Travel & Tourism</span>
+                        <h1>Client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="tt-dash-topbar-right">
+                    <div class="tt-dash-topbar-user">
+                        <span class="tt-dash-topbar-email"></span>
+                        <div class="tt-dash-topbar-profile">
+                            <img src="assets/images/profile-2.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Client Dashboard Overview --->
+            <main class="tt-dash-content tt-client-bookings-page">
+
+                <!-- Page Header -->
+                <div class="tt-client-booking-head">
+                    <div>
+                        <span class="tt-dash-welcome-kicker">
+                            <i class="bi bi-airplane"></i> MY JOURNEY
+                        </span>
+                        <h2>My Bookings</h2>
+                        <p>Manage your upcoming adventures and travel history.</p>
+                    </div>
+
+                    <a href="packages.html" class="tt-client-booking-explore">
+                        <i class="bi bi-compass"></i>
+                        <span>Explore Packages</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Booking Stats -->
+                <div class="tt-client-booking-stats">
+
+                    <div class="tt-client-booking-stat">
+                        <div class="tt-client-booking-stat-icon">
+                            <i class="bi bi-calendar2-check"></i>
+                        </div>
+                        <span>Upcoming Trips</span>
+                        <strong>02</strong>
+                        <small>Ready for your next adventure</small>
+                    </div>
+
+                    <div class="tt-client-booking-stat">
+                        <div class="tt-client-booking-stat-icon">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span>Completed Trips</span>
+                        <strong>04</strong>
+                        <small>Destinations you've explored</small>
+                    </div>
+
+                    <div class="tt-client-booking-stat">
+                        <div class="tt-client-booking-stat-icon">
+                            <i class="bi bi-airplane-engines"></i>
+                        </div>
+                        <span>Total Bookings</span>
+                        <strong>06</strong>
+                        <small>Your complete travel history</small>
+                    </div>
+
+                    <div class="tt-client-booking-stat">
+                        <div class="tt-client-booking-stat-icon">
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <span>Total Spent</span>
+                        <strong>₹4.8L</strong>
+                        <small>Across all your journeys</small>
+                    </div>
+
+                </div>
+
+                <!-- Booking Section -->
+                <section class="tt-dash-panel tt-client-booking-panel">
+
+                    <div class="tt-client-booking-panel-head">
+                        <div>
+                            <span class="tt-dash-panel-kicker">TRAVEL HISTORY</span>
+                            <h3>All My Bookings</h3>
+                        </div>
+
+                        <span class="tt-client-booking-total">
+                            06 Bookings
+                        </span>
+                    </div>
+
+                    <!-- Filters -->
+                    <div class="tt-client-booking-filters">
+
+                        <div class="tt-client-booking-search">
+                            <i class="bi bi-search"></i>
+                            <input type="search" id="ttClientBookingSearch"
+                                placeholder="Search destination or booking ID" autocomplete="off">
+                        </div>
+
+                        <div class="tt-client-booking-select">
+                            <i class="bi bi-funnel"></i>
+                            <select id="ttClientBookingStatus">
+                                <option value="">All Status</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+
+                        <div class="tt-client-booking-select">
+                            <i class="bi bi-geo-alt"></i>
+                            <select id="ttClientBookingDestination">
+                                <option value="">All Destinations</option>
+                                <option value="bali">Bali</option>
+                                <option value="switzerland">Switzerland</option>
+                                <option value="paris">Paris</option>
+                                <option value="dubai">Dubai</option>
+                                <option value="maldives">Maldives</option>
+                            </select>
+                        </div>
+
+                        <div class="tt-client-booking-select">
+                            <i class="bi bi-calendar3"></i>
+                            <select id="ttClientBookingDate">
+                                <option value="">All Dates</option>
+                                <option value="upcoming">Upcoming</option>
+                                <option value="this-month">This Month</option>
+                                <option value="next-month">Next Month</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!-- Desktop Table -->
+                    <div class="tt-client-booking-table-wrap">
+
+                        <table class="tt-client-booking-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Booking</th>
+                                    <th>Destination</th>
+                                    <th>Travel Date</th>
+                                    <th>Guests</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr data-status="confirmed" data-destination="bali" data-date="upcoming">
+
+                                    <td>
+                                        <strong>#TT24801</strong>
+                                        <small>Booked 10 Sep 2026</small>
+                                    </td>
+
+                                    <td>
+                                        <div class="tt-client-booking-destination">
+                                            <strong>Bali Escape</strong>
+                                            <span>Bali, Indonesia</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span>18 Sep 2026</span>
+                                    </td>
+
+                                    <td>
+                                        <span>2 Adults</span>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹84,500</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="tt-dash-status confirmed">
+                                            Confirmed
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="tt-client-booking-view" aria-label="View booking">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="pending" data-destination="switzerland" data-date="upcoming">
+
+                                    <td>
+                                        <strong>#TT24796</strong>
+                                        <small>Booked 08 Sep 2026</small>
+                                    </td>
+
+                                    <td>
+                                        <div class="tt-client-booking-destination">
+                                            <strong>Swiss Adventure</strong>
+                                            <span>Switzerland</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span>24 Sep 2026</span>
+                                    </td>
+
+                                    <td>
+                                        <span>2 Adults</span>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹1,26,000</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="tt-dash-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="tt-client-booking-view" aria-label="View booking">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="confirmed" data-destination="paris" data-date="upcoming">
+
+                                    <td>
+                                        <strong>#TT24791</strong>
+                                        <small>Booked 05 Sep 2026</small>
+                                    </td>
+
+                                    <td>
+                                        <div class="tt-client-booking-destination">
+                                            <strong>Paris Romance</strong>
+                                            <span>Paris, France</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span>02 Oct 2026</span>
+                                    </td>
+
+                                    <td>
+                                        <span>2 Adults</span>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹1,18,500</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="tt-dash-status confirmed">
+                                            Confirmed
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="tt-client-booking-view" aria-label="View booking">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="confirmed" data-destination="dubai" data-date="upcoming">
+
+                                    <td>
+                                        <strong>#TT24784</strong>
+                                        <small>Booked 02 Sep 2026</small>
+                                    </td>
+
+                                    <td>
+                                        <div class="tt-client-booking-destination">
+                                            <strong>Dubai Escape</strong>
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span>11 Oct 2026</span>
+                                    </td>
+
+                                    <td>
+                                        <span>4 Adults</span>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹96,800</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="tt-dash-status confirmed">
+                                            Confirmed
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="tt-client-booking-view" aria-label="View booking">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="completed" data-destination="maldives" data-date="completed">
+
+                                    <td>
+                                        <strong>#TT24772</strong>
+                                        <small>Booked 12 Aug 2026</small>
+                                    </td>
+
+                                    <td>
+                                        <div class="tt-client-booking-destination">
+                                            <strong>Island Retreat</strong>
+                                            <span>Maldives</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span>16 Aug 2026</span>
+                                    </td>
+
+                                    <td>
+                                        <span>2 Adults</span>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹1,42,000</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="tt-dash-status completed">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="tt-client-booking-view" aria-label="View booking">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="cancelled" data-destination="bali" data-date="completed">
+
+                                    <td>
+                                        <strong>#TT24761</strong>
+                                        <small>Booked 05 Aug 2026</small>
+                                    </td>
+
+                                    <td>
+                                        <div class="tt-client-booking-destination">
+                                            <strong>Bali Escape</strong>
+                                            <span>Bali, Indonesia</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span>10 Aug 2026</span>
+                                    </td>
+
+                                    <td>
+                                        <span>3 Adults</span>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹1,12,500</strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="tt-dash-status cancelled">
+                                            Cancelled
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="tt-client-booking-view" aria-label="View booking">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <!-- Mobile Booking Cards -->
+                    <div class="tt-client-booking-cards">
+
+                        <article class="tt-client-booking-card" data-status="confirmed" data-destination="bali"
+                            data-date="upcoming">
+
+                            <div class="tt-client-booking-card-top">
+                                <div>
+                                    <span class="tt-client-booking-number">#TT24801</span>
+                                    <strong>Bali Escape</strong>
+                                    <small>Bali, Indonesia</small>
+                                </div>
+
+                                <span class="tt-dash-status confirmed">
+                                    Confirmed
+                                </span>
+                            </div>
+
+                            <div class="tt-client-booking-card-details">
+                                <span>
+                                    <i class="bi bi-calendar3"></i>
+                                    18 Sep 2026
+                                </span>
+                                <span>
+                                    <i class="bi bi-people"></i>
+                                    2 Adults
+                                </span>
+                                <strong>₹84,500</strong>
+                            </div>
+
+                            <button type="button" class="tt-client-booking-card-btn">
+                                View Booking
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+
+                        </article>
+
+                        <article class="tt-client-booking-card" data-status="pending" data-destination="switzerland"
+                            data-date="upcoming">
+
+                            <div class="tt-client-booking-card-top">
+                                <div>
+                                    <span class="tt-client-booking-number">#TT24796</span>
+                                    <strong>Swiss Adventure</strong>
+                                    <small>Switzerland</small>
+                                </div>
+
+                                <span class="tt-dash-status pending">
+                                    Pending
+                                </span>
+                            </div>
+
+                            <div class="tt-client-booking-card-details">
+                                <span>
+                                    <i class="bi bi-calendar3"></i>
+                                    24 Sep 2026
+                                </span>
+                                <span>
+                                    <i class="bi bi-people"></i>
+                                    2 Adults
+                                </span>
+                                <strong>₹1,26,000</strong>
+                            </div>
+
+                            <button type="button" class="tt-client-booking-card-btn">
+                                View Booking
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+
+                        </article>
+
+                        <article class="tt-client-booking-card" data-status="confirmed" data-destination="paris"
+                            data-date="upcoming">
+
+                            <div class="tt-client-booking-card-top">
+                                <div>
+                                    <span class="tt-client-booking-number">#TT24791</span>
+                                    <strong>Paris Romance</strong>
+                                    <small>Paris, France</small>
+                                </div>
+
+                                <span class="tt-dash-status confirmed">
+                                    Confirmed
+                                </span>
+                            </div>
+
+                            <div class="tt-client-booking-card-details">
+                                <span>
+                                    <i class="bi bi-calendar3"></i>
+                                    02 Oct 2026
+                                </span>
+                                <span>
+                                    <i class="bi bi-people"></i>
+                                    2 Adults
+                                </span>
+                                <strong>₹1,18,500</strong>
+                            </div>
+
+                            <button type="button" class="tt-client-booking-card-btn">
+                                View Booking
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="tt-client-booking-footer">
+                        <span>
+                            Showing <strong>1–6</strong> of <strong>6</strong> bookings
+                        </span>
+
+                        <div class="tt-client-booking-pagination">
+                            <button type="button" disabled>
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+
+                            <button type="button" class="active">1</button>
+                            <button type="button" disabled>2</button>
+                            <button type="button" disabled>3</button>
+
+                            <span>...</span>
+
+                            <button type="button" disabled>42</button>
+
+                            <button type="button" disabled>
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-bookings.js"></script>
+</body>
+
+</html>

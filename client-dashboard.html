@@ -1,0 +1,401 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="tt-dash">
+        <!--- Mobile Overlay --->
+        <div class="tt-dash-overlay" id="ttDashOverlay"></div>
+        <!--- Sidebar --->
+        <aside class="tt-dash-sidebar" id="ttDashSidebar">
+            <div class="tt-dash-sidebar-top">
+                <a href="index.html" class="tt-dash-logo">
+                    <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                </a>
+                <div class="tt-dash-sidebar-profile">
+                    <div class="tt-dash-sidebar-profile-img">
+                        <img src="assets/images/profile-2.webp" alt="Profile">
+                    </div>
+                    <div class="tt-dash-sidebar-profile-info">
+                        <strong class="tt-dash-user-name">Traveler</strong>
+                        <span class="tt-dash-user-email"></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="tt-dash-sidebar-nav">
+                <a href="client-dashboard.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="client-bookings.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-airplane"></i></span>
+                    <span>Bookings</span>
+                </a>
+                <a href="client-payment.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-credit-card"></i></span>
+                    <span>Payment</span>
+                </a>
+                <a href="client-profile.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-person-circle"></i></span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="tt-dash-sidebar-bottom">
+                <a href="login.html" class="tt-dash-logout" id="ttDashLogout">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="tt-dash-main">
+            <!--- Topbar --->
+            <header class="tt-dash-topbar">
+                <div class="tt-dash-topbar-left">
+                    <button type="button" class="tt-dash-menu-btn" id="ttDashMenuBtn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="tt-dash-topbar-title">
+                        <span>Travel & Tourism</span>
+                        <h1>Client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="tt-dash-topbar-right">
+                    <div class="tt-dash-topbar-user">
+                        <span class="tt-dash-topbar-email"></span>
+                        <div class="tt-dash-topbar-profile">
+                            <img src="assets/images/profile-2.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Client Dashboard Overview --->
+            <!--- Client Dashboard Content --->
+            <main class="tt-dash-content">
+                <!--- Welcome Header --->
+                <div class="tt-dash-welcome">
+                    <div class="tt-dash-welcome-text">
+                        <span class="tt-dash-welcome-kicker"><i class="bi bi-person-check"></i> Welcome Back</span>
+                        <h2>Hello, <span class="tt-dash-welcome-name" id="ttClientWelcomeName">Traveler</span></h2>
+                        <p>Your next adventure is closer than you think. Here's your travel overview.</p>
+                    </div>
+                    <a href="packages.html" class="tt-dash-view-site">
+                        <i class="bi bi-compass"></i>
+                        <span>Explore Packages</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+                <!--- Travel Statistics --->
+                <div class="tt-dash-stats">
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>My Bookings</span>
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                        <strong>06</strong>
+                        <small><b>2 upcoming</b> trips planned</small>
+                    </div>
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Upcoming Trips</span>
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <strong>02</strong>
+                        <small><b>Next trip</b> in 8 days</small>
+                    </div>
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Completed Trips</span>
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <strong>04</strong>
+                        <small><b>4 destinations</b> explored</small>
+                    </div>
+                    <div class="tt-dash-stat-card">
+                        <div class="tt-dash-stat-top">
+                            <span>Total Spent</span>
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <strong>₹4.8L</strong>
+                        <small><b>06 bookings</b> made so far</small>
+                    </div>
+                </div>
+                <!--- Upcoming Journey And Quick Access --->
+                <div class="tt-dash-grid">
+                    <section class="tt-dash-panel tt-dash-upcoming">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Your Journey</span>
+                                <h3>Upcoming Trip</h3>
+                            </div>
+                            <a href="client-bookings.html" class="tt-dash-panel-link">View Bookings <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="tt-client-trip-card">
+                            <div class="tt-client-trip-image">
+                                <img src="assets/images/package-bali.webp" alt="Bali Escape">
+                                <span class="tt-client-trip-badge">Upcoming</span>
+                            </div>
+                            <div class="tt-client-trip-content">
+                                <div class="tt-client-trip-location">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>Bali, Indonesia</span>
+                                </div>
+                                <h4>Bali Escape</h4>
+                                <p>Private villas, hidden beaches and unforgettable island moments.</p>
+                                <div class="tt-client-trip-meta">
+                                    <span><i class="bi bi-calendar3"></i> 18 Sep 2026</span>
+                                    <span><i class="bi bi-people"></i> 2 Adults</span>
+                                    <span><i class="bi bi-clock"></i> 5 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tt-dash-panel tt-dash-quick">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Quick Access</span>
+                                <h3>Travel Shortcuts</h3>
+                            </div>
+                        </div>
+                        <div class="tt-client-shortcuts">
+                            <a href="client-bookings.html" class="tt-client-shortcut">
+                                <span><i class="bi bi-airplane"></i></span>
+                                <div>
+                                    <strong>My Bookings</strong>
+                                    <small>View your trips</small>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="client-payment.html" class="tt-client-shortcut">
+                                <span><i class="bi bi-credit-card"></i></span>
+                                <div>
+                                    <strong>Payments</strong>
+                                    <small>Check payment history</small>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="packages.html" class="tt-client-shortcut">
+                                <span><i class="bi bi-map"></i></span>
+                                <div>
+                                    <strong>Explore Packages</strong>
+                                    <small>Find your next journey</small>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="client-profile.html" class="tt-client-shortcut">
+                                <span><i class="bi bi-person-circle"></i></span>
+                                <div>
+                                    <strong>My Profile</strong>
+                                    <small>Manage your details</small>
+                                </div>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                <!--- Recent Booking History And Travel Checklist --->
+                <div class="tt-dash-grid">
+                    <section class="tt-dash-panel tt-client-booking-overview">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Travel History</span>
+                                <h3>Recent Bookings</h3>
+                            </div>
+                            <a href="client-bookings.html" class="tt-dash-panel-link">View All <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="tt-dash-table-wrap">
+                            <table class="tt-dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Booking</th>
+                                        <th>Destination</th>
+                                        <th>Travel Date</th>
+                                        <th>Guests</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>#TT24801</strong></td>
+                                        <td>
+                                            <strong>Bali Escape</strong>
+                                            <small>Bali, Indonesia</small>
+                                        </td>
+                                        <td>18 Sep 2026</td>
+                                        <td>2 Adults</td>
+                                        <td><strong>₹84,500</strong></td>
+                                        <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#TT24796</strong></td>
+                                        <td>
+                                            <strong>Swiss Adventure</strong>
+                                            <small>Switzerland</small>
+                                        </td>
+                                        <td>24 Sep 2026</td>
+                                        <td>2 Adults</td>
+                                        <td><strong>₹1,26,000</strong></td>
+                                        <td><span class="tt-dash-status pending">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#TT24791</strong></td>
+                                        <td>
+                                            <strong>Paris Romance</strong>
+                                            <small>Paris, France</small>
+                                        </td>
+                                        <td>02 Oct 2026</td>
+                                        <td>2 Adults</td>
+                                        <td><strong>₹1,18,500</strong></td>
+                                        <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#TT24784</strong></td>
+                                        <td>
+                                            <strong>Dubai Escape</strong>
+                                            <small>Dubai, UAE</small>
+                                        </td>
+                                        <td>11 Oct 2026</td>
+                                        <td>4 Adults</td>
+                                        <td><strong>₹96,800</strong></td>
+                                        <td><span class="tt-dash-status confirmed">Confirmed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="tt-dash-panel tt-client-travel-tips">
+                        <div class="tt-dash-panel-head">
+                            <div>
+                                <span class="tt-dash-panel-kicker">Before You Go</span>
+                                <h3>Travel Checklist</h3>
+                            </div>
+                        </div>
+                        <div class="tt-client-checklist">
+                            <div class="tt-client-check-item completed">
+                                <span><i class="bi bi-check-lg"></i></span>
+                                <div>
+                                    <strong>Profile completed</strong>
+                                    <small>Your traveler details are ready</small>
+                                </div>
+                            </div>
+                            <div class="tt-client-check-item completed">
+                                <span><i class="bi bi-check-lg"></i></span>
+                                <div>
+                                    <strong>Booking confirmed</strong>
+                                    <small>Your upcoming trip is confirmed</small>
+                                </div>
+                            </div>
+                            <div class="tt-client-check-item">
+                                <span><i class="bi bi-circle"></i></span>
+                                <div>
+                                    <strong>Review travel documents</strong>
+                                    <small>Keep your important documents ready</small>
+                                </div>
+                            </div>
+                            <div class="tt-client-check-item">
+                                <span><i class="bi bi-circle"></i></span>
+                                <div>
+                                    <strong>Prepare your itinerary</strong>
+                                    <small>Check your trip details before departure</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--- Recommended Journey --->
+                <section class="tt-dash-panel tt-client-recommendations">
+                    <div class="tt-dash-panel-head">
+                        <div>
+                            <span class="tt-dash-panel-kicker">Made For You</span>
+                            <h3>Recommended Journeys</h3>
+                        </div>
+                        <a href="packages.html" class="tt-dash-panel-link">Explore All <i
+                                class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                    <div class="tt-client-recommendation-grid">
+                        <a href="packages.html" class="tt-client-recommendation-card">
+                            <div class="tt-client-recommendation-icon"><i class="bi bi-buildings"></i></div>
+                            <div>
+                                <strong>Paris Romance</strong>
+                                <span>Paris, France</span>
+                            </div>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="packages.html" class="tt-client-recommendation-card">
+                            <div class="tt-client-recommendation-icon"><i class="fa-solid fa-earth-oceania"></i></div>
+                            <div>
+                                <strong>Swiss Adventure</strong>
+                                <span>Switzerland</span>
+                            </div>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="packages.html" class="tt-client-recommendation-card">
+                            <div class="tt-client-recommendation-icon"><i class="bi bi-water"></i></div>
+                            <div>
+                                <strong>Maldives Escape</strong>
+                                <span>Maldives</span>
+                            </div>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

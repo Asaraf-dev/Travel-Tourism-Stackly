@@ -1,0 +1,311 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tourism | Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body>
+
+    <!--- Dashboard --->
+    <div class="tt-dash">
+        <!--- Mobile Overlay --->
+        <div class="tt-dash-overlay" id="ttDashOverlay"></div>
+        <!--- Sidebar --->
+        <aside class="tt-dash-sidebar" id="ttDashSidebar">
+            <div class="tt-dash-sidebar-top">
+                <a href="index.html" class="tt-dash-logo">
+                    <img src="assets\images\brand-logo.webp" alt="Travel & Tourism">
+                </a>
+                <div class="tt-dash-sidebar-profile">
+                    <div class="tt-dash-sidebar-profile-img">
+                        <img src="assets/images/profile-2.webp" alt="Profile">
+                    </div>
+                    <div class="tt-dash-sidebar-profile-info">
+                        <strong class="tt-dash-user-name">Traveler</strong>
+                        <span class="tt-dash-user-email"></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="tt-dash-sidebar-nav">
+                <a href="client-dashboard.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="client-bookings.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-airplane"></i></span>
+                    <span>Bookings</span>
+                </a>
+                <a href="client-payment.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-credit-card"></i></span>
+                    <span>Payment</span>
+                </a>
+                <a href="client-profile.html" class="tt-dash-sidebar-link">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-person-circle"></i></span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="tt-dash-sidebar-bottom">
+                <a href="login.html" class="tt-dash-logout" id="ttDashLogout">
+                    <span class="tt-dash-sidebar-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!--- Main Area --->
+        <div class="tt-dash-main">
+            <!--- Topbar --->
+            <header class="tt-dash-topbar">
+                <div class="tt-dash-topbar-left">
+                    <button type="button" class="tt-dash-menu-btn" id="ttDashMenuBtn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="tt-dash-topbar-title">
+                        <span>Travel & Tourism</span>
+                        <h1>Client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="tt-dash-topbar-right">
+                    <div class="tt-dash-topbar-user">
+                        <span class="tt-dash-topbar-email"></span>
+                        <div class="tt-dash-topbar-profile">
+                            <img src="assets/images/profile-2.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Client Payment --->
+            <main class="tt-dash-content">
+                <section class="tt-client-payment">
+                    <div class="tt-client-payment-head">
+                        <div>
+                            <span class="tt-client-payment-kicker">PAYMENTS</span>
+                            <h2>Payment Center</h2>
+                            <p>Manage your trip payments and keep track of every transaction.</p>
+                        </div>
+                        <a href="packages.html" class="tt-client-payment-action"><i class="bi bi-plus-lg"></i><span>Book
+                                a New Trip</span><i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                    <div class="tt-client-payment-summary">
+                        <div class="tt-client-payment-summary-card">
+                            <div class="tt-client-payment-summary-top">
+                                <span>Total Spent</span>
+                                <span class="tt-client-payment-summary-icon"><i class="bi bi-wallet2"></i></span>
+                            </div>
+                            <strong>₹4.8L</strong>
+                            <small>Across 06 bookings</small>
+                        </div>
+                        <div class="tt-client-payment-summary-card">
+                            <div class="tt-client-payment-summary-top">
+                                <span>Paid Amount</span>
+                                <span class="tt-client-payment-summary-icon"><i class="bi bi-check2-circle"></i></span>
+                            </div>
+                            <strong>₹3.7L</strong>
+                            <small>Payments completed</small>
+                        </div>
+                        <div class="tt-client-payment-summary-card">
+                            <div class="tt-client-payment-summary-top">
+                                <span>Pending</span>
+                                <span class="tt-client-payment-summary-icon"><i
+                                        class="bi bi-hourglass-split"></i></span>
+                            </div>
+                            <strong>₹1.1L</strong>
+                            <small>Awaiting payment</small>
+                        </div>
+                        <div class="tt-client-payment-summary-card">
+                            <div class="tt-client-payment-summary-top">
+                                <span>Transactions</span>
+                                <span class="tt-client-payment-summary-icon"><i class="bi bi-receipt"></i></span>
+                            </div>
+                            <strong>08</strong>
+                            <small>Payment records</small>
+                        </div>
+                    </div>
+                    <div class="tt-client-payment-layout">
+                        <section class="tt-dash-panel tt-client-payment-history">
+                            <div class="tt-dash-panel-head">
+                                <div>
+                                    <span class="tt-dash-panel-kicker">TRANSACTION HISTORY</span>
+                                    <h3>Payment History</h3>
+                                </div>
+                                <button type="button" class="tt-client-payment-download"><i
+                                        class="bi bi-download"></i><span>Export</span></button>
+                            </div>
+                            <div class="tt-client-payment-table-wrap">
+                                <table class="tt-client-payment-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Transaction</th>
+                                            <th>Booking</th>
+                                            <th>Date</th>
+                                            <th>Method</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>#TXN98421</strong><small>Payment</small></td>
+                                            <td><strong>Bali Escape</strong><small>#TT24801</small></td>
+                                            <td>18 Sep 2026</td>
+                                            <td><span class="tt-client-payment-method"><i class="bi bi-credit-card"></i>
+                                                    Card</span></td>
+                                            <td><strong>₹84,500</strong></td>
+                                            <td><span class="tt-client-payment-status paid">Paid</span></td>
+                                            <td><button type="button" class="tt-client-payment-view"
+                                                    aria-label="View transaction"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#TXN98317</strong><small>Payment</small></td>
+                                            <td><strong>Swiss Adventure</strong><small>#TT24796</small></td>
+                                            <td>16 Sep 2026</td>
+                                            <td><span class="tt-client-payment-method"><i class="bi bi-bank"></i>
+                                                    UPI</span></td>
+                                            <td><strong>₹63,000</strong></td>
+                                            <td><span class="tt-client-payment-status paid">Paid</span></td>
+                                            <td><button type="button" class="tt-client-payment-view"
+                                                    aria-label="View transaction"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#TXN98104</strong><small>Payment</small></td>
+                                            <td><strong>Paris Romance</strong><small>#TT24791</small></td>
+                                            <td>14 Sep 2026</td>
+                                            <td><span class="tt-client-payment-method"><i class="bi bi-credit-card"></i>
+                                                    Card</span></td>
+                                            <td><strong>₹1,18,500</strong></td>
+                                            <td><span class="tt-client-payment-status paid">Paid</span></td>
+                                            <td><button type="button" class="tt-client-payment-view"
+                                                    aria-label="View transaction"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#TXN97882</strong><small>Payment</small></td>
+                                            <td><strong>Dubai Escape</strong><small>#TT24784</small></td>
+                                            <td>12 Sep 2026</td>
+                                            <td><span class="tt-client-payment-method"><i class="bi bi-bank"></i>
+                                                    UPI</span></td>
+                                            <td><strong>₹96,800</strong></td>
+                                            <td><span class="tt-client-payment-status paid">Paid</span></td>
+                                            <td><button type="button" class="tt-client-payment-view"
+                                                    aria-label="View transaction"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#TXN97641</strong><small>Advance</small></td>
+                                            <td><strong>Island Retreat</strong><small>#TT24772</small></td>
+                                            <td>10 Sep 2026</td>
+                                            <td><span class="tt-client-payment-method"><i class="bi bi-credit-card"></i>
+                                                    Card</span></td>
+                                            <td><strong>₹71,000</strong></td>
+                                            <td><span class="tt-client-payment-status pending">Pending</span></td>
+                                            <td><button type="button" class="tt-client-payment-view"
+                                                    aria-label="View transaction"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#TXN97420</strong><small>Payment</small></td>
+                                            <td><strong>Bali Escape</strong><small>#TT24761</small></td>
+                                            <td>08 Sep 2026</td>
+                                            <td><span class="tt-client-payment-method"><i class="bi bi-wallet2"></i>
+                                                    Wallet</span></td>
+                                            <td><strong>₹1,12,500</strong></td>
+                                            <td><span class="tt-client-payment-status cancelled">Cancelled</span></td>
+                                            <td><button type="button" class="tt-client-payment-view"
+                                                    aria-label="View transaction"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tt-client-payment-footer">
+                                <span>Showing <strong>1–6</strong> of <strong>8</strong> transactions</span>
+                                <div class="tt-client-payment-pagination">
+                                    <button type="button" disabled><i class="bi bi-chevron-left"></i></button>
+                                    <button type="button" class="active">1</button>
+                                    <button type="button" disabled>2</button>
+                                    <button type="button" disabled><i class="bi bi-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </section>
+                        <aside class="tt-dash-panel tt-client-payment-side">
+                            <div class="tt-dash-panel-head">
+                                <div>
+                                    <span class="tt-dash-panel-kicker">NEXT PAYMENT</span>
+                                    <h3>Upcoming Payment</h3>
+                                </div>
+                            </div>
+                            <div class="tt-client-payment-upcoming">
+                                <div class="tt-client-payment-upcoming-icon"><i class="bi bi-airplane"></i></div>
+                                <span>Swiss Adventure</span>
+                                <small>Booking #TT24796</small>
+                                <strong>₹63,000</strong>
+                                <div class="tt-client-payment-due"><span>Due Date</span><b>20 Sep 2026</b></div>
+                                <button type="button" class="tt-client-payment-pay"><span>Pay Now</span><i
+                                        class="bi bi-arrow-right"></i></button>
+                            </div>
+                            <div class="tt-client-payment-secure">
+                                <i class="bi bi-shield-check"></i>
+                                <div>
+                                    <strong>Secure Payments</strong>
+                                    <p>Your payment information is protected with secure processing.</p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </main>
+
+
+        </div>
+    </div>
+
+    <!--- Js Files --->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-payment.js"></script>
+</body>
+
+</html>

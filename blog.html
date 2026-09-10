@@ -1,0 +1,465 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel & Tourism | Blog</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="tt-ldr" id="ttLdr">
+    <div class="tt-ldr-glow"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-one"></div>
+    <div class="tt-ldr-orbit tt-ldr-orbit-two"></div>
+    <div class="tt-ldr-compass">
+      <div class="tt-ldr-compass-ring"></div>
+      <div class="tt-ldr-compass-inner">
+        <i class="bi bi-compass tt-ldr-compass-icon"></i>
+      </div>
+      <span class="tt-ldr-point tt-ldr-point-one"></span>
+      <span class="tt-ldr-point tt-ldr-point-two"></span>
+      <span class="tt-ldr-point tt-ldr-point-three"></span>
+      <span class="tt-ldr-point tt-ldr-point-four"></span>
+    </div>
+    <div class="tt-ldr-content">
+      <h2 class="tt-ldr-title">Travel<span>.</span></h2>
+      <p class="tt-ldr-message" id="ttLdrMessage">Preparing your journey...</p>
+    </div>
+    <div class="tt-ldr-route">
+      <span class="tt-ldr-route-line"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-one"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-two"></span>
+      <span class="tt-ldr-route-dot tt-ldr-route-dot-three"></span>
+      <i class="fa-solid fa-plane tt-ldr-plane"></i>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+  <div data-navbar></div>
+
+  <!--- Sub Hero Section Start --->
+  <section class="tt-sub-hero">
+    <div class="tt-sub-hero-bg"></div>
+    <div class="tt-sub-hero-overlay"></div>
+    <div class="tt-sub-hero-shape tt-sub-hero-shape-one"></div>
+    <div class="tt-sub-hero-shape tt-sub-hero-shape-two"></div>
+    <div class="container">
+      <div class="tt-sub-hero-content">
+        <span class="tt-sub-hero-kicker"><i class="bi bi-compass"></i> Explore With Us</span>
+        <h1 class="tt-sub-hero-title">Travel <span>Stories</span></h1>
+        <div class="tt-sub-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span>Blog</span>
+        </div>
+      </div>
+    </div>
+    <div class="tt-sub-hero-scroll">
+      <span>Scroll To Explore</span>
+      <div class="tt-sub-hero-scroll-line"></div>
+    </div>
+  </section>
+  <!--- Sub Hero Section End --->
+
+  <!--- Featured Travel Story Section Start --->
+  <section class="tt-blg-featured">
+    <div class="container">
+      <div class="tt-blg-featured-top">
+        <div class="tt-blg-featured-heading">
+          <span class="tt-blg-featured-kicker"><i class="bi bi-bookmark-heart"></i> Featured Travel Story</span>
+          <h2 class="tt-blg-featured-title">A Story Worth<br><span>Getting Lost In.</span></h2>
+        </div>
+      </div>
+      <article class="tt-blg-featured-card">
+        <div class="tt-blg-featured-image-wrap">
+          <img src="assets/images/kyoto-serenity.webp" alt="Kyoto travel experience" class="tt-blg-featured-image">
+          <span class="tt-blg-featured-location"><i class="bi bi-geo-alt-fill"></i> Kyoto, Japan</span>
+          <div class="tt-blg-featured-image-number">01</div>
+        </div>
+        <div class="tt-blg-featured-content">
+          <div class="tt-blg-featured-meta">
+            <span>DESTINATION</span>
+            <span class="tt-blg-featured-meta-dot"></span>
+            <span>8 MIN READ</span>
+          </div>
+          <h3>Finding The Quiet Side Of Kyoto</h3>
+          <p>Beyond the famous temples and busy streets lies another Kyoto — a slower world of hidden gardens, quiet tea
+            houses and timeless neighbourhoods waiting to be discovered.</p>
+          <div class="tt-blg-featured-author">
+            <div class="tt-blg-featured-author-avatar">TT</div>
+            <div class="tt-blg-featured-author-info">
+              <strong>Travel & Tourism Journal</strong>
+              <span>September 08, 2026</span>
+            </div>
+          </div>
+          <a href="404.html" class="tt-blg-featured-read">
+            <span>Read The Story</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!--- Featured Travel Story Section End --->
+
+  <!--- Explore Travel Stories Section Start --->
+  <section class="tt-blg-stories" id="blog">
+    <div class="container">
+      <div class="tt-blg-stories-head">
+        <div class="tt-blg-stories-heading">
+          <span class="tt-blg-stories-kicker"><i class="bi bi-journal-richtext"></i> Explore Travel Stories</span>
+          <h2 class="tt-blg-stories-title">Stories To<br><span>Fuel Your Journey.</span></h2>
+        </div>
+        <p class="tt-blg-stories-intro">Discover destination guides, useful travel tips and inspiring stories created to
+          make your next journey even more meaningful.</p>
+      </div>
+      <div class="tt-blg-stories-filter">
+        <button type="button" class="tt-blg-stories-filter-btn active" data-category="all">All Stories</button>
+        <button type="button" class="tt-blg-stories-filter-btn" data-category="destinations">Destinations</button>
+        <button type="button" class="tt-blg-stories-filter-btn" data-category="tips">Travel Tips</button>
+        <button type="button" class="tt-blg-stories-filter-btn" data-category="experiences">Experiences</button>
+        <button type="button" class="tt-blg-stories-filter-btn" data-category="culture">Food & Culture</button>
+        <button type="button" class="tt-blg-stories-filter-btn" data-category="inspiration">Inspiration</button>
+      </div>
+      <div class="tt-blg-stories-grid">
+        <article class="tt-blg-story-card" data-category="destinations">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/package-bali.webp" alt="Bali travel guide" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Destinations</span>
+            <span class="tt-blg-story-number">01</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>DESTINATIONS</span><span>6 MIN READ</span></div>
+            <h3><a>A First-Timer's Guide To Bali</a></h3>
+            <p>From peaceful rice terraces to vibrant coastal towns, discover how to experience Bali beyond the usual
+              itinerary.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="destinations">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/switzerland-adventure.webp" alt="Swiss Alps travel" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Destinations</span>
+            <span class="tt-blg-story-number">02</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>DESTINATIONS</span><span>7 MIN READ</span></div>
+            <h3><a>A Slow Journey Through The Swiss Alps</a></h3>
+            <p>Mountain villages, scenic trains and breathtaking landscapes make Switzerland a destination worth taking
+              slowly.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="destinations">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/amalfi-coast.webp" alt="Amalfi Coast travel" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Destinations</span>
+            <span class="tt-blg-story-number">03</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>DESTINATIONS</span><span>5 MIN READ</span></div>
+            <h3><a>The Colours Of The Amalfi Coast</a></h3>
+            <p>Follow the winding coastline through colourful villages, hidden coves and unforgettable Mediterranean
+              views.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="tips">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/travel-packing.webp" alt="Smart travel packing" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Travel Tips</span>
+            <span class="tt-blg-story-number">04</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>TRAVEL TIPS</span><span>5 MIN READ</span></div>
+            <h3><a>The Art Of Packing Light</a></h3>
+            <p>Travel smarter with simple packing habits that leave more room for the experiences that matter.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="tips">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/travel-budget.webp" alt="Travel budget planning" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Travel Tips</span>
+            <span class="tt-blg-story-number">05</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>TRAVEL TIPS</span><span>6 MIN READ</span></div>
+            <h3>
+              <a">How To Travel Well On A Budget</a>
+            </h3>
+            <p>Smart ways to plan your stay, transport and experiences without compromising on the joy of travelling.
+            </p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="tips">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/travel-checklist.webp" alt="Travel checklist" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Travel Tips</span>
+            <span class="tt-blg-story-number">06</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>TRAVEL TIPS</span><span>4 MIN READ</span></div>
+            <h3><a>Your Essential Pre-Trip Checklist</a></h3>
+            <p>Everything worth checking before you close your front door and begin your next adventure.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="experiences">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/destination-paris.webp" alt="Hot air balloon experience" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Experiences</span>
+            <span class="tt-blg-story-number">07</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>EXPERIENCES</span><span>6 MIN READ</span></div>
+            <h3><a>Seeing Cappadocia From The Sky</a></h3>
+            <p>Wake before sunrise and float above a landscape that looks like it belongs in another world.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="experiences">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/package-dubai.webp" alt="African safari experience" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Experiences</span>
+            <span class="tt-blg-story-number">08</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>EXPERIENCES</span><span>8 MIN READ</span></div>
+            <h3><a>A Wild Morning On Safari</a></h3>
+            <p>Experience the quiet thrill of the African wilderness and the unforgettable moments found between sunrise
+              and sunset.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="experiences">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/diving-maldives.webp" alt="Maldives diving experience" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Experiences</span>
+            <span class="tt-blg-story-number">09</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>EXPERIENCES</span><span>5 MIN READ</span></div>
+            <h3><a>Underwater Wonders Of The Maldives</a></h3>
+            <p>Discover a world beneath the turquoise surface with colourful reefs, marine life and crystal-clear
+              waters.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="culture">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/japanese-food.webp" alt="Japanese food culture" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Food & Culture</span>
+            <span class="tt-blg-story-number">10</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>FOOD & CULTURE</span><span>6 MIN READ</span></div>
+            <h3><a>A Taste Of Japan Beyond Sushi</a></h3>
+            <p>Explore the everyday flavours, local traditions and small food discoveries that make Japan unforgettable.
+            </p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="culture">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/mediterranean-food.webp" alt="Mediterranean food culture"
+              class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Food & Culture</span>
+            <span class="tt-blg-story-number">11</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>FOOD & CULTURE</span><span>5 MIN READ</span></div>
+            <h3><a>Where Food Meets The Mediterranean</a></h3>
+            <p>From family kitchens to seaside tables, discover the flavours and traditions behind Mediterranean travel.
+            </p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="culture">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/morocco-market.webp" alt="Morocco market culture" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Food & Culture</span>
+            <span class="tt-blg-story-number">12</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>FOOD & CULTURE</span><span>7 MIN READ</span></div>
+            <h3><a>Inside The Colours Of Marrakech</a></h3>
+            <p>Lose yourself among spice markets, artisan workshops and the rich cultural rhythm of Marrakech.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="inspiration">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/solo-travel.webp" alt="Solo travel inspiration" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Inspiration</span>
+            <span class="tt-blg-story-number">13</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>INSPIRATION</span><span>5 MIN READ</span></div>
+            <h3><a>Why Everyone Should Travel Solo Once</a></h3>
+            <p>There is something powerful about choosing your own direction and discovering a destination on your
+              terms.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="inspiration">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/road-trip.webp" alt="Scenic road trip" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Inspiration</span>
+            <span class="tt-blg-story-number">14</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>INSPIRATION</span><span>6 MIN READ</span></div>
+            <h3><a>When The Road Becomes The Destination</a></h3>
+            <p>Take the scenic route, leave some plans behind and discover why the best memories often happen between
+              places.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="tt-blg-story-card" data-category="inspiration">
+          <a class="tt-blg-story-image-wrap">
+            <img src="assets/images/travel-memories.webp" alt="Travel memories" class="tt-blg-story-image">
+            <span class="tt-blg-story-category">Inspiration</span>
+            <span class="tt-blg-story-number">15</span>
+          </a>
+          <div class="tt-blg-story-content">
+            <div class="tt-blg-story-meta"><span>INSPIRATION</span><span>4 MIN READ</span></div>
+            <h3><a>Collect Moments, Not Just Places</a></h3>
+            <p>The destinations may fade into photographs, but the little moments are what stay with us long after
+              returning home.</p>
+            <a href="404.html" class="tt-blg-story-link">Read Story <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="tt-blg-stories-empty">
+        <i class="bi bi-compass"></i>
+        <span>No stories found in this category.</span>
+      </div>
+    </div>
+  </section>
+  <!--- Explore Travel Stories Section End --->
+
+  <!--- Travel Tips & Guides Section Start --->
+<section class="tt-blg-guides">
+    <div class="container">
+        <div class="tt-blg-guides-head">
+            <div class="tt-blg-guides-heading">
+                <span class="tt-blg-guides-kicker"><i class="bi bi-compass"></i> Travel Tips & Guides</span>
+                <h2 class="tt-blg-guides-title">Travel Smarter.<br><span>Experience More.</span></h2>
+            </div>
+            <div class="tt-blg-guides-head-right">
+                <p>Practical ideas and thoughtful guides to help you plan better, travel lighter and make every journey count.</p>
+                <a href="404.html" class="tt-blg-guides-all">Explore All Guides <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+        <div class="tt-blg-guides-list">
+            <a href="404.html" class="tt-blg-guide-item">
+                <div class="tt-blg-guide-number">01</div>
+                <div class="tt-blg-guide-main">
+                    <span class="tt-blg-guide-category">Planning</span>
+                    <h3>How To Plan A Stress-Free Holiday</h3>
+                    <p>A simple approach to choosing destinations, building your itinerary and leaving enough room for spontaneous moments.</p>
+                </div>
+                <div class="tt-blg-guide-meta">
+                    <span>6 MIN READ</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+            </a>
+            <a href="404.html" class="tt-blg-guide-item">
+                <div class="tt-blg-guide-number">02</div>
+                <div class="tt-blg-guide-main">
+                    <span class="tt-blg-guide-category">Packing</span>
+                    <h3>The Complete Guide To Packing Light</h3>
+                    <p>Learn what to pack, what to leave behind and how to build a versatile travel wardrobe without overpacking.</p>
+                </div>
+                <div class="tt-blg-guide-meta">
+                    <span>5 MIN READ</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+            </a>
+            <a href="404.html" class="tt-blg-guide-item">
+                <div class="tt-blg-guide-number">03</div>
+                <div class="tt-blg-guide-main">
+                    <span class="tt-blg-guide-category">Budget</span>
+                    <h3>Smart Ways To Make Your Travel Budget Go Further</h3>
+                    <p>From accommodation to experiences, discover practical ways to spend wisely while still enjoying the journey.</p>
+                </div>
+                <div class="tt-blg-guide-meta">
+                    <span>7 MIN READ</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+            </a>
+            <a href="404.html" class="tt-blg-guide-item">
+                <div class="tt-blg-guide-number">04</div>
+                <div class="tt-blg-guide-main">
+                    <span class="tt-blg-guide-category">Essentials</span>
+                    <h3>Things To Check Before You Leave Home</h3>
+                    <p>Keep your trip smooth with a practical checklist covering documents, bookings, payments and everyday essentials.</p>
+                </div>
+                <div class="tt-blg-guide-meta">
+                    <span>4 MIN READ</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+  <!--- Travel Tips & Guides Section End --->
+
+  <div data-footer></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/blog.js"></script>
+</body>
+
+</html>
