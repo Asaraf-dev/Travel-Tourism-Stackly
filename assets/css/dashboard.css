@@ -1,7 +1,7 @@
 /*--- Dashboard ---*/
 html,body {width:100%;max-width:100%;}
 .tt-dash {position:relative;display:flex;width:100%;min-height:100vh;max-width:100vw;background:var(--tt-light);}
-.tt-dash-sidebar {position:fixed;top:0;left:0;width:255px;height:100vh;padding:25px 16px 18px;display:flex;flex-direction:column;background:var(--tt-dark);z-index:1000;}
+.tt-dash-sidebar {position:fixed;top:0;left:0;width:255px;height:100dvh;padding:25px 16px 18px;display:flex;flex-direction:column;background:var(--tt-dark);z-index:1000;}
 .tt-dash-sidebar-top {width:100%;}
 .tt-dash-logo {display:flex;align-items:center;justify-content:center;width:100%;height:58px;padding:8px 15px;margin-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.08);background: var(--tt-white);border-radius: 10px;}
 .tt-dash-logo img {width:145px;max-width:100%;height:auto;object-fit:contain;}

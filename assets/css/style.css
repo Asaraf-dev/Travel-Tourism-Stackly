@@ -690,7 +690,7 @@
 .tt-pkg-discovery-badge i {color:var(--tt-secondary);}
 .tt-pkg-discovery-wishlist {position:absolute;z-index:3;top:14px;right:14px;display:flex;align-items:center;justify-content:center;width:35px;height:35px;border:1px solid rgba(255,255,255,0.3);border-radius:50%;color:var(--tt-white);background:rgba(23,51,47,0.4);font-size:13px;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);cursor:pointer;transition:all 0.3s ease;}
 .tt-pkg-discovery-wishlist:hover,.tt-pkg-discovery-wishlist.active {color:#e76f51;background:var(--tt-white);}
-.tt-pkg-discovery-wishlist.active i::before {content:"\\f415";}
+.tt-pkg-discovery-wishlist.active i::before {content:"\f415";}
 .tt-pkg-discovery-image-bottom {position:absolute;z-index:2;left:15px;right:15px;bottom:14px;display:flex;align-items:center;justify-content:space-between;color:var(--tt-white);font-size:11px;font-weight:600;}
 .tt-pkg-discovery-image-bottom span {display:flex;align-items:center;gap:5px;}
 .tt-pkg-discovery-image-bottom i {color:var(--tt-secondary);font-size:10px;}

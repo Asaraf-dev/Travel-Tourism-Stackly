@@ -81,3 +81,15 @@
 @media (max-width:991px) {.tt-reg-intro-points {display:grid;grid-template-columns:repeat(3,1fr);max-width:650px;margin:25px auto 0;text-align:left;}.tt-reg-intro-point {flex-direction:column;align-items:center;gap:7px;text-align:center;font-size:9px;}}
 @media (max-width:767px) {.tt-reg-intro-points {gap:8px;}.tt-reg-intro-point {font-size:8px;}.tt-reg-intro-point i {width:29px;height:29px;font-size:11px;}.tt-reg-password-hint {gap:4px;}.tt-reg-password-hint span {font-size:8px;padding:4px 6px;}}
 @media (max-width:575px) {.tt-reg-intro-points {display:none;}.tt-reg-password-hint span {font-size:7px;padding:4px 5px;}}
+
+/*--- Role Error Popup ---*/
+.tt-auth-role-popup {position: fixed;top: 30px;right: 30px;z-index: 9999;display: flex;align-items: center;gap: 12px;width: min(380px,calc(100% - 30px));padding: 14px 16px;background: var(--tt-white);border: 1px solid var(--tt-border);border-left: 4px solid var(--tt-accent);border-radius: var(--tt-radius-sm);box-shadow: var(--tt-shadow);opacity: 0;visibility: hidden;transform: translateX(30px);transition: var(--tt-transition);}
+.tt-auth-role-popup.show {opacity: 1;visibility: visible;transform: translateX(0);}
+.tt-auth-role-popup-icon {display: flex;align-items: center;justify-content: center;flex: 0 0 38px;width: 38px;height: 38px;border-radius: 50%;background: rgba(231,111,81,0.10);color: var(--tt-accent);font-size: 16px;}
+.tt-auth-role-popup-content {display: flex;flex-direction: column;gap: 3px;min-width: 0;flex: 1;}
+.tt-auth-role-popup-content strong {font-size: 13px;color: var(--tt-heading);font-weight: 700;}
+.tt-auth-role-popup-content span {font-size: 10px;color: var(--tt-text);line-height: 1.5;}
+.tt-auth-role-popup-close {display: flex;align-items: center;justify-content: center;width: 28px;height: 28px;padding: 0;border: 0;background: transparent;color: var(--tt-text);font-size: 16px;cursor: pointer;transition: var(--tt-transition);}
+.tt-auth-role-popup-close:hover {color: var(--tt-accent);transform: rotate(90deg);}
+@media (max-width:767px) {.tt-auth-role-popup {top: 15px;right: 15px;width: calc(100% - 30px);}}
+
